@@ -1,0 +1,40 @@
+doctype html
+html (lang="fr")
+  head
+    meta (charset="UTF-8")
+    meta (name="viewport" content="width=device-width, initial-scale=1.0")
+    meta (http-equiv="X-UA-Compatible" content="ie=edge")
+    title Pearson
+    //- link (rel="preload" href="fonts/roboto-medium.woff2" as="font" crossorigin="anonymous")
+    link (rel="stylesheet" href="css/style.min.css")
+
+
+body
+  header
+    nav(class="main-nav main-nav--close")
+      div
+        ul
+          li
+            a(href="content.html") Enseignement superieur
+          li
+            a(href="#") Anglais langue etrangere
+        address
+          a(href="tel:+33 (0) 1 23 32 12 23") +33 (0) 1 23 32 12 23
+      div
+        a(href="#")
+          img(src="img/pearson-logo.svg" alt="Pearson logo")
+        ul
+          li
+            a(href="#") L’offre
+          li
+            a(href="#") Aide & Service client
+          li
+            a(href="#") A propos
+          li(class="active")
+            a(href="#")
+        button(type="button")
+    button(type="button") Nous contacter
+  main(class="project")
+
+  footer(class="footer")
+  script(src="js/script.js")
