@@ -7,35 +7,16 @@ html(lang="fr")
     title Pearson
     //- link (rel="preload" href="fonts/roboto-medium.woff2" as="font" crossorigin="anonymous")
     link(rel="stylesheet" href="css/style.min.css")
+  body
+    include ../modules/header
 
+    main(class="home-page")
+      section(class="landings-promo")
+      section(class="content-slider")
+      section(class="content-reviews")
+      section(class="advantage")
+      section(class="provoke")
 
-body
-  header
-    nav(class="main-nav main-nav--close")
-      div
-        ul
-          li
-            a(href="content.html") Enseignement superieur
-          li
-            a(href="#") Anglais langue etrangere
-        address
-          a(href="tel:+33 (0) 1 23 32 12 23") +33 (0) 1 23 32 12 23
-      div
-        a(href="#")
-          img(src="img/pearson-logo.svg" alt="Pearson logo")
-        ul
-          li
-            a(href="#") L’offre
-          li
-            a(href="#") Aide & Service client
-          li
-            a(href="#") A propos
-          li(class="active")
-            a(href="#")
-        button(type="button")
-    button(type="button") Nous contacter
-    p hfxfhxfhxhxfhxf hdhfxhfx nfxhfxfx gxfxfh hfxfhxfhxhxfhxf hdhfxhfx nfxhfxfx gxfxfh hfxfhxfhxhxfhxf hdhfxhfx nfxhfxfx gxfxfh hfxfhxfhxhxfhxf hdhfxhfx nfxhfxfx gxfxfh hfxfhxfhxhxfhxf hdhfxhfx nfxhfxfx gxfxfh hfxfhxfhxhxfhxf hdhfxhfx nfxhfxfx gxfxfh hfxfhxfhxhxfhxf hdhfxhfx nfxhfxfx gxfxfh hfxfhxfhxhxfhxf hdhfxhfx nfxhfxfx gxfxfh hfxfhxfhxhxfhxf hdhfxhfx nfxhfxfx gxfxfh hfxfhxfhxhxfhxf hdhfxhfx nfxhfxfx gxfxfh hfxfhxfhxhxfhxf hdhfxhfx nfxhfxfx gxfxfh hfxfhxfhxhxfhxf hdhfxhfx nfxhfxfx gxfxfh hfxfhxfhxhxfhxf hdhfxhfx nfxhfxfx gxfxfh hfxfhxfhxhxfhxf hdhfxhfx nfxhfxfx gxfxfh hfxfhxfhxhxfhxf hdhfxhfx nfxhfxfx gxfxfh 
-  main(class="project")
-
-  footer(class="footer")
-  script(src="js/script.js")
+    include ../modules/footer
+    div(class="form")
+    script(src="js/script.js")
