@@ -17,18 +17,41 @@ var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-htmlmin')
 var autoprefixer = require('autoprefixer');
 var pug = require('gulp-pug');
+var htmlBeautify = require('gulp-html-beautify');
+
+gulp.task('htmlBeautify', () => {
+  return gulp.src('temp/pug/*.html')
+    .pipe(htmlBeautify({
+      indentSize: 2,
+      unformatted: [
+        'abbr', 'area', 'b', 'bdi', 'bdo', 'br', 'cite','code', 'data', 
+        'datalist', 'del', 'dfn', 'em', 'embed', 'i', 'ins', 'kbd', 
+        'keygen', 'map', 'mark', 'math', 'meter', 'noscript','object', 
+        'output', 'progress', 'q', 'ruby', 's', 'samp', 'small','strong', 
+        'sub', 'sup', 'template', 'time', 'u', 'var', 'wbr', 'text',
+        'acronym', 'address', 'big', 'dt', 'ins', 'strike', 'tt', 'p']
+      }))
+    .pipe(gulp.dest('temp'))
+});
+
+// gulp.task('pug', () => {
+//   return gulp.src('source/pug/pages/*.pug')
+//     .pipe(pug({
+//       pretty: true
+//     }))
+//     .pipe(gulp.dest('source/pug/pages'))
+// });
 
 gulp.task('pug', () => {
-  return gulp.src('source/pug/*.pug')
-    .pipe(plumber())
+  return gulp.src('source/pug/pages/*.pug')
     .pipe(pug({
       pretty: true
     }))
-    .pipe(gulp.dest('source'))
+    .pipe(gulp.dest('temp/pug'))
 });
 
 gulp.task('clean', () => {
-  return del('build');
+  return del('build', 'temp');
 });
 
 gulp.task('copy', () => {
@@ -71,7 +94,7 @@ gulp.task('sprite', () => {
     .pipe(gulp.dest('build/img'));
 });
 gulp.task('html', () => {
-  return gulp.src('source/*.html')
+  return gulp.src('temp/*.html')
     .pipe(posthtml([include()]))
     .pipe(htmlmin())
     .pipe(gulp.dest('build'));
@@ -114,13 +137,15 @@ gulp.task('server', () => {
 
   gulp.watch('source/sass/**/*.{scss,sass}', gulp.series('css'));
   gulp.watch('source/img/icon-*.svg', gulp.series('sprite', 'html', 'refresh'));
-  gulp.watch('source/*.html', gulp.series('html', 'refresh'));
+  gulp.watch('temp/*.html', gulp.series('sprite', 'html', 'refresh'));
   gulp.watch('source/js/*.js', gulp.series('js', 'refresh'));
+  gulp.watch('source/pug/**/*.pug', gulp.series('pug', 'htmlBeautify'));
 });
 
 gulp.task('build', gulp.series(
   'clean',
   'pug',
+  'htmlBeautify',
   'copy',
   'js',
   'css',
