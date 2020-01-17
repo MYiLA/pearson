@@ -1,8 +1,13 @@
-$font-main: "Roboto", sans-serif;
+$font-main: "OpensSans","Arial", sans-serif;
+$font-accent: "PlayfairDisplay","Times New Roman", serif;
 $mobile-width: 320px;
 $tablet-width: 512px;
-$desktop-width: 1160px;
+$desktop-width: 1200px;
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 $white: rgb(255, 255, 255);
 $black: rgb(0, 0, 0);
+$bg-light: #f9f9f9;
+$bg-dark: #eaeaea;
+$bg-color-light: #d5eae4;
+$bg-color-dark: #007fa3;
