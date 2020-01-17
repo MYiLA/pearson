@@ -1,0 +1,10 @@
+.promo-slider__arrow {
+  @include arrow;
+
+  &--left {
+    transform: rotate(0)
+  }
+  &--right {
+    transform: rotate(180deg)
+  }
+}
