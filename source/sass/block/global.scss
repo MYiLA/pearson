@@ -35,6 +35,10 @@ a {
   @include text;
 }
 
+a, button {
+  cursor: url('img/cursor-pointer.svg'), pointer;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -53,4 +57,8 @@ ul {
 
 body {
   background-color: aqua;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #003057;
 }

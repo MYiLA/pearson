@@ -12,12 +12,19 @@ html(lang="fr")
 
     main(class="landing-page")
       section(class="landing-promo")
+        include ../modules/landing-promo
       div(class="important")
-      section(class="promo-slider")
+        include ../modules/important
+      div(class="promo-slider")
+        include ../modules/promo-slider
       section(class="product")
+        include ../modules/product
       section(class="landing-media")
-      sectio(class="additional")
-      section(class="provoke")
+        include ../modules/landing-media
+      div(class="additional")
+        include ../modules/additional
+      div(class="provoke")
+        include ../modules/provoke
 
     include ../modules/footer
     div(class="form")

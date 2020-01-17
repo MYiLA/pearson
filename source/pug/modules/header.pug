@@ -1,7 +1,7 @@
 header
   .header
-    nav(class="main-nav main-nav--close")
-      div
+    nav(class="header__main-nav main-nav main-nav--close")
+      div(class="main-nav__bookmark")
         ul
           li
             a(href="content.html") Enseignement superieur
@@ -9,9 +9,9 @@ header
             a(href="#") Anglais langue etrangere
         address
           a(href="tel:+33 (0) 1 23 32 12 23") +33 (0) 1 23 32 12 23
-      div
-        a(href="#")
-          img(src="img/pearson-logo.svg" alt="Pearson logo")
+      div(class="main-nav__main-nav")
+        a(href="index.html")
+          img(src="img/pearson-logo.png" width="159" alt="Pearson logo")
         ul
           li
             a(href="#") L’offre
@@ -19,7 +19,5 @@ header
             a(href="#") Aide & Service client
           li
             a(href="#") A propos
-          li(class="active")
-            a(href="#")
-        button(type="button")
-    button(type="button") Nous contacter
+        button(type="button") Nous contacter
+        button(type="button" aria-label="close or open menu")
