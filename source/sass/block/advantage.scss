@@ -1,5 +1,26 @@
-.advantage p,
-.advantage h3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
+.advantage {
+  background-color: $light-bg;
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.advantage__title {
+font-weight: 400;
+font-family: $font-accent;
+}
+
+.advantage__list {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+flex-wrap: wrap;
+}
+
+.advantage__item {
+  width: 176px;
+  display: flex;
+  flex-wrap: wrap;
+
 }
