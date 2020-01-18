@@ -1,19 +1,21 @@
 .landing-promo__wrap-homo {
   & a {
     @include btn;
+    background-color: $green;
   }
   & button {
     @include btn;
-    background-color: #007fa3;
+    background-color: $blue-dark;
   }
 }
 
 .landing-promo__wrap-landing {
   & a {
     @include btn;
-    background-color: #007fa3;
+    background-color: $blue-dark;
   }
   & button {
     @include btn; 
+    background-color: $green;
   }
 }

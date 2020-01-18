@@ -1,3 +1,18 @@
+.form {
+  // @include popap;
+
+  & input {
+    @include input;
+    margin-bottom: 18px;
+  }
+}
+
+.form__wrap {
+  padding: 18px;
+  background-color: white;
+}
+
 .form__close {
   @include close-btn;
 }
+
