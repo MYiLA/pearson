@@ -1,0 +1,103 @@
+.wheel-promo {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.wheel-promo__item {
+  position: relative;
+  width: 88px;
+  padding: 0;
+  padding-top: 110px;
+  padding-bottom: 20px;
+  margin: 0;
+  margin-right: 25px;
+  flex-shrink: 0;
+
+  &:hover,
+  &:focus {
+    & div {
+      display: block;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    opacity: 0.37;
+    bottom: 70px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  &::before {
+    background-color: $blue-dark;
+  }
+
+  &::after {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    opacity: 1;
+  }
+
+  &:nth-child(1) {
+    &::after {
+      background-image: url(../img/icon-landing-simulations.svg);
+      // .wheel-promo__tooltip {
+      // display: block;  
+      // }
+    }
+  }
+
+  &:nth-child(2) {
+    &::after {
+      background-image: url(../img/icon-landing-apps.svg);
+    }
+  }
+
+  &:nth-child(3) {
+    &::after {
+      background-image: url(../img/icon-landing-ebooks.svg);
+    }
+  }
+
+  &:nth-child(4) {
+    &::after {
+      background-image: url(../img/icon-landing-mesure.svg);
+    }
+  }
+
+  &:nth-child(5) {
+    &::after {
+      background-image: url(../img/icon-landing-librairie.svg);
+    }
+  }
+
+  &:nth-child(6) {
+    &::after {
+      background-image: url(../img/icon-landing-labs.svg);
+    }
+  }
+
+}
+
+.wheel-promo__tooltip {
+  display: none;
+  width: 230px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 11px;
+  font-weight: 600;
+  background-color: #ffb81c;
+  border-radius: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}

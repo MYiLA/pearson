@@ -1,6 +1,10 @@
-@mixin text ($size:16px) {
+@mixin text {
   color: #474747;
   font-family: $font-main;
-  font-size: $size;
+  font-size: 14px;
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  } 
 }

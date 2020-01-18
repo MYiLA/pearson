@@ -1,21 +1,67 @@
+.landing-promo {
+  background-image: url(../img/home-page/home-cover-bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -60px;
+  padding: 35px;
+  padding-top: 40px;
+
+  & h2 {
+    font-size: 36px;
+    font-weight: 400;
+    color: #474747;
+  }
+
+  & p {
+    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #474747;
+  }
+
+  & em {
+    color: $green;
+  }
+}
+
+.landing-promo__wrap-homo,
+.landing-promo__wrap-landing {
+  margin-bottom: 30px;
+
+  & a,
+  & button {
+    @include btn;
+    max-width: 145px;
+    margin-right: 5px;
+  }
+}
+
 .landing-promo__wrap-homo {
   & a {
-    @include btn;
     background-color: $green;
   }
   & button {
-    @include btn;
     background-color: $blue-dark;
   }
 }
 
 .landing-promo__wrap-landing {
   & a {
-    @include btn;
     background-color: $blue-dark;
   }
   & button {
-    @include btn; 
     background-color: $green;
   }
+}
+
+.landing-promo__wrap-buttons {
+  width: 310px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.landing-promo__wheel {
+  padding: 0;
+  margin: 0;
 }
