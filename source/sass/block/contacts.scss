@@ -1,0 +1,15 @@
+ul.contacts {
+  margin: 0 auto;
+  width: 260px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts__item {
+  margin-right: 20px;
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}

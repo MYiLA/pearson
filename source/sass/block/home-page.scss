@@ -1,4 +1,10 @@
 .home-page {
+  
+  .provoke__video,
+  .provoke__external {
+    display: none;
+  }
+
   & .landing-promo__wrap-landing {
     display: none;
   }
