@@ -73,6 +73,7 @@
 
 .main-nav__tel {
   color: $blue-dark;
+  font-size: 9px;
 }
 
 .main-nav__wrap {
@@ -148,31 +149,27 @@
   align-content: flex-start;
   text-align: right;
   padding: 25px;
-
-  & ul {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    margin-bottom: 30px;
-  }
-
-  & li {
-    margin-bottom: 15px;
-  }
-
-  & a {
-    font-size: 14px;
-  }
-
-  & button {
-    @include btn;
-    width: 145px;
-    background-color: $blue-dark;
-  }
 }
 
-.main-nav__main-nav .main-nav__close {
+.main-nav__list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.main-nav__item {
+  margin-bottom: 15px;
+}
+
+.main-nav__contact {
+  @include btn;
+  width: 145px;
+  background-color: $blue-dark;
+}
+
+.main-nav__close {
   order: -1;
   position: relative;
   width: 25px;
@@ -210,6 +207,86 @@
     opacity: 0.3;
   }
 }
+
+@media (min-width: $tablet-width) {
+
+  .main-nav__bookmark-wrap {
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+
+  .main-nav__bookmark-item {
+    width: auto;
+    max-width: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+
+  .main-nav__bookmark {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .main-nav__tel {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .main-nav__wrap {
+    padding: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  }
+
+  .main-nav__logo {
+    width: 160px;
+    margin-top: -15px;
+  }
+
+  .main-nav .main-nav__wrap-popup {
+    display: flex;
+  }
+
+  .main-nav__burger,
+  .main-nav__close {
+    display: none;
+  }
+
+  .main-nav__wrap-popup {
+    position: static;
+    z-index: 0;
+    background-color: transparent;
+  }
+
+  .main-nav__main-nav {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  .main-nav__list {
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+
+  .main-nav__item {
+    margin-bottom: 10px;
+    margin-right: 40px;
+  }
+
+  .main-nav__contact {
+    min-width: 213px;
+    background-color: $green;
+  }
+}
+
+
 
 ///////////////////// Animation ///////////////////////
 

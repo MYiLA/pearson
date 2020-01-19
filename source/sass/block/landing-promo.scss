@@ -6,12 +6,6 @@
   padding: 35px;
   padding-top: 40px;
 
-  & h2 {
-    font-size: 36px;
-    font-weight: 400;
-    color: #474747;
-  }
-
   & p {
     margin-bottom: 30px;
     font-size: 14px;
@@ -36,6 +30,16 @@
   }
 }
 
+.landing-promo__title {
+  font-size: 36px;
+  font-weight: 400;
+  color: #474747;
+
+  @media (min-width: 560px) {
+    max-width: 490px;
+  }
+}
+
 .landing-promo__wrap-homo {
   & a {
     background-color: $green;
@@ -55,7 +59,7 @@
 }
 
 .landing-promo__wrap-buttons {
-  width: 310px;
+  max-width: 310px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
