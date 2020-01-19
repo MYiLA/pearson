@@ -1,10 +1,53 @@
 .landing-promo {
-  background-image: url(../img/home-page/home-cover-bg-mobile.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 -65px;
   padding: 35px;
   padding-top: 40px;
+
+  .home-page & {
+    // background-image: url(../img/home-page/home-cover-bg-mobile.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: 0 -65px;
+    background-repeat: no-repeat;
+    background-image: url(../img/home-page/home-cover-bg.png);
+    background-size: 300px;
+    background-position: 100% -10%;
+
+    @media (min-width: 390px) {
+      background-image: url(../img/home-page/home-cover-bg.png);
+      background-size: 300px;
+      background-position: 94% -50%;
+    }
+
+    @media (min-width: 570px) {
+      background-size: 300px;
+      background-position: 94% -50%;
+    }
+
+    @media (min-width: 790px) {
+      background-size: 350px;
+      background-position: 100% -81px;
+    }
+
+    @media (min-width: 900px) {
+      background-size: 400px;
+      background-position: 37% 17px;
+    }
+
+    @media (min-width: 1120px) {
+      background-size: 490px;
+      background-position: 33% 0;
+    }
+
+    @media (min-width: 1250px) {
+      background-size: 495px;
+      background-position: 38% 100px;
+    }
+
+    @media (min-width: 1440px) {
+      background-size: 580px;
+      background-position: 33% 13px;
+    }
+  }
 }
 
 .landing-promo__highlight {
@@ -13,8 +56,6 @@
 
 .landing-promo__desc {
   margin-bottom: 30px;
-  font-size: 14px;
-  font-weight: 400;
   color: #474747;
 }
 
@@ -22,10 +63,11 @@
   @include btn;
   max-width: 145px;
   margin-right: 5px;
-  
+
   &--blue {
     background-color: $blue-dark;
   }
+
   &--green {
     background-color: $green;
   }
@@ -33,7 +75,7 @@
 
 .landing-promo__wrap-homo,
 .landing-promo__wrap-landing {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .landing-promo__title {
@@ -43,24 +85,6 @@
 
   @media (min-width: 560px) {
     max-width: 490px;
-  }
-}
-
-.landing-promo__wrap-homo {
-  & a {
-    background-color: $green;
-  }
-  & button {
-    background-color: $blue-dark;
-  }
-}
-
-.landing-promo__wrap-landing {
-  & a {
-    background-color: $blue-dark;
-  }
-  & button {
-    background-color: $green;
   }
 }
 
@@ -74,4 +98,54 @@
 .landing-promo__wheel {
   padding: 0;
   margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .landing-promo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 565px;
+  }
+
+  .landing-promo__wrap-landing,
+  .landing-promo__wrap-homo {
+    width: 60%;
+  }
+
+  .landing-promo__wrap-homo {}
+
+  .landing-promo__wheel {
+    width: 40%;
+  }
+
+  .landing-promo__wrap-buttons {
+    max-width: 460px;
+  }
+
+  .landing-promo__btn {
+    max-width: none;
+    width: 213px;
+  }
+}
+
+@media (min-width: 1070px) {
+  .landing-promo {
+    min-height: 700px;
+  }
+}
+
+@media (min-width: 1250px) {
+
+  .landing-promo__title {
+    max-width: 668px;
+    font-size: 52px;
+    line-height: 71px;
+  }
+
+  .landing-promo {
+    min-height: 818px;
+  }
 }

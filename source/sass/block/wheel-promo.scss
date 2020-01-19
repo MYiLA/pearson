@@ -1,23 +1,35 @@
 .wheel-promo {
+  width: 100%;
   display: flex;
   list-style: none;
   text-align: center;
   overflow-x: auto;
+
+  &:hover .wheel-promo__item {
+    opacity: 0.37;
+  }
 }
 
 .wheel-promo__item {
   position: relative;
   width: 88px;
   padding: 0;
-  padding-top: 110px;
+  padding-top: 130px;
   padding-bottom: 20px;
   margin: 0;
   margin-right: 25px;
   flex-shrink: 0;
+  transition: 0.3s;
+  outline: none;
+  cursor: pointer;
 
-  &:hover,
-  &:focus {
-    & div {
+  .wheel-promo &:hover,
+  .wheel-promo &:focus {
+    transform: scale(1.2);
+    z-index: 1;
+    opacity: 1;
+
+    & .wheel-promo__tooltip {
       display: block;
     }
   }
@@ -30,9 +42,9 @@
     height: 54px;
     border-radius: 50%;
     opacity: 0.37;
-    bottom: 70px;
+    top: 65px;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
   }
 
   &::before {
@@ -84,14 +96,30 @@
     }
   }
 
+  &:nth-child(3n + 1) {
+    & .wheel-promo__tooltip {
+      left: 10px;
+    }
+  }
+
+  &:nth-child(3n + 2) {
+    & .wheel-promo__tooltip {
+      left: -86px;
+    }
+  }
+
+  &:nth-child(3n + 3) {
+    & .wheel-promo__tooltip {
+      left: -162px;
+    }
+  }
 }
 
 .wheel-promo__tooltip {
   display: none;
   width: 230px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 24px;
   font-size: 11px;
   font-weight: 600;
   background-color: #ffb81c;
@@ -100,4 +128,82 @@
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  z-index: 2;
+}
+
+@media (min-width: $tablet-width) {
+  .wheel-promo {
+    position: relative;
+    width: 34%;
+    height: 0;
+    padding-bottom: 35%;
+    overflow-x: visible;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/icon-landing-central.png);
+      background-repeat: no-repeat;
+      background-size: 55%;
+      background-position: 50% 35%;
+      transition: 0.3s;
+    }
+
+    &:hover::before {
+      opacity: 0.37;
+    }
+  }
+
+  .wheel-promo__item {
+    min-height: 115px;
+    position: absolute;
+    padding: 0;
+    padding-top: 65px;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    .wheel-promo &:hover,
+    .wheel-promo &:focus {
+      transform: translate(-50%, -50%) scale(1.2);
+      z-index: 1;
+      opacity: 1;
+    }
+
+    .wheel-promo & .wheel-promo__tooltip {
+      top: 35px;
+      left: -222px;
+    }
+  }
+}
+
+@media (min-width: 1230px) {
+  .wheel-promo {
+    width: 388px;
+    height: 400px;
+    padding-bottom: 0;
+
+    &::before {
+      background-size: 63%;
+      background-position: 50% 35%;
+      transition: 0.3s;
+    }
+  }
 }

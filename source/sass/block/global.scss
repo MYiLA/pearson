@@ -46,7 +46,7 @@ body {
 
  button {
   cursor: pointer;
-  transition: 0.6s;
+  transition: 0.3s;
   &:focus,
   &:hover {
     outline: none;
@@ -62,7 +62,7 @@ a {
   text-decoration: none;
   @include text;
   color: $blue-dark;
-  transition: 0.6s;
+  transition: 0.3s;
   &:focus,
   &:hover {
     outline: none;

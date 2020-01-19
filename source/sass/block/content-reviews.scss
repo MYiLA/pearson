@@ -53,7 +53,38 @@
 .content-reviews__more {
   text-transform: uppercase;
   font-weight: 600;
+  color: $green;
 }
 
+@media (min-width: $tablet-width) {
+  .content-reviews {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .content-reviews__title {
+    max-width: 500px;
+  }
+
+  .content-reviews__wrap {
+    display: flex;
+  }
+
+  // .content-reviews__wrap-img {
+  //   flex-basis: 300px;
+  //   margin-bottom: 0;
+  //   img {
+  //     // height: 100%;
+  //     // width: auto;
+  //   }
+  // }
+
+  .content-reviews__wrap-desc {
+    padding-top: 35px;
+    padding-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
 
 
