@@ -5,29 +5,35 @@
   background-position: 0 -65px;
   padding: 35px;
   padding-top: 40px;
+}
 
-  & p {
-    margin-bottom: 30px;
-    font-size: 14px;
-    font-weight: 400;
-    color: #474747;
+.landing-promo__highlight {
+  color: $green;
+}
+
+.landing-promo__desc {
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #474747;
+}
+
+.landing-promo__btn {
+  @include btn;
+  max-width: 145px;
+  margin-right: 5px;
+  
+  &--blue {
+    background-color: $blue-dark;
   }
-
-  & em {
-    color: $green;
+  &--green {
+    background-color: $green;
   }
 }
 
 .landing-promo__wrap-homo,
 .landing-promo__wrap-landing {
   margin-bottom: 30px;
-
-  & a,
-  & button {
-    @include btn;
-    max-width: 145px;
-    margin-right: 5px;
-  }
 }
 
 .landing-promo__title {
