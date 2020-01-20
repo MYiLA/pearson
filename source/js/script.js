@@ -3,9 +3,14 @@ const tabletWidth = 900;
 
 // слайдер//
 
-import Glide from '@glidejs/glide'
-
-new Glide('.glide').mount()
+new Glide('.glide', {
+ type: 'carousel',
+  startAt: 0,
+  perView: 3, 
+  breakpoints: {
+    900: {perView: 2},
+    550:{perView: 1}},
+}).mount();
 
 // колесо///
 

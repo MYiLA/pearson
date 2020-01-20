@@ -1,9 +1,11 @@
 .wheel-promo {
   width: 100%;
+  min-height: 130px;
   display: flex;
   list-style: none;
   text-align: center;
   overflow-x: auto;
+  overflow-y: hidden;
 
   &:hover .wheel-promo__item {
     opacity: 0.37;
@@ -96,19 +98,23 @@
     }
   }
 
-  &:nth-child(3n + 1) {
+  &:nth-child(1),
+  &:nth-last-child(3) {
     & .wheel-promo__tooltip {
       left: 10px;
     }
   }
 
-  &:nth-child(3n + 2) {
+  &:nth-child(2),
+  &:nth-last-child(2) {
     & .wheel-promo__tooltip {
       left: -86px;
     }
   }
 
-  &:nth-child(3n + 3) {
+  &:nth-child(3),
+  &:nth-last-child(1),
+  & {
     & .wheel-promo__tooltip {
       left: -162px;
     }
@@ -138,6 +144,7 @@
     height: 0;
     padding-bottom: 35%;
     overflow-x: visible;
+    overflow-y: visible;
     
     &::before {
       content: "";

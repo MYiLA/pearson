@@ -6,18 +6,19 @@ html(lang="fr")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
     title Pearson
     //- link (rel="preload" href="fonts/roboto-medium.woff2" as="font" crossorigin="anonymous")
+    link(rel="stylesheet" href="glide/glide.core.min.css")
     link(rel="stylesheet" href="css/style.min.css")
-    link(rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css")
+    script(src="js/picturefill.js")
   body
     include ../modules/header
 
     main(class="home-page")
       h1(class="visually-hidden") entreprise d'éducation internationale
-      section(class="home-page__landing-promo landing-promo")
+      section(class="home-page__landing-promo landing-promo wrap")
         include ../modules/landing-promo
       div(class="home-page__content-slider content-slider")
         include ../modules/content-slider
-      section(class="home-page__content-reviews content-reviews")
+      section(class="home-page__content-reviews content-reviews wrap")
         include ../modules/content-reviews
       section(class="home-page__advantage advantage")
         include ../modules/advantage
@@ -26,6 +27,8 @@ html(lang="fr")
 
     include ../modules/footer
     include ../modules/form
+
     script(src="js/jquery-2.2.3.min.js")
+    script(src="glide/glide.min.js")
     script(src="js/script.js")
 

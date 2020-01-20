@@ -1,35 +1,49 @@
-ul(class="content-slider__list")
-  li(class="content-slider__item")
-    article(class="content-slider__article")
-      img(src="img/home-page/content-1.jpg" alt="Content 1")
-      div(class="content-slider__wrap-desc")
-        h2(class="content-slider__title") Content 1
-        p(class="content-slider__desc") Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie
-        a(class="content-slider__link" href="content.html") En savoir plus
-  li(class="content-slider__item")
-    article(class="content-slider__article")
-      img(src="img/home-page/content-2.jpg" alt="Content 2")
-      div(class="content-slider__wrap-desc")
-        h2(class="content-slider__title") Content 2
-        p(class="content-slider__desc") Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie
-        a(class="content-slider__link" href="content.html") En savoir plus
-  li(class="content-slider__item")
-    article(class="content-slider__article")
-      img(src="img/home-page/content-3.jpg" alt="Content 3")
-      div(class="content-slider__wrap-desc")
-        h2(class="content-slider__title") Content 3
-        p(class="content-slider__desc") Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie
-        a(class="content-slider__link" href="content.html") En savoir plus
-  li(class="content-slider__item")
-    article(class="content-slider__article")
-      img(src="img/home-page/content-3.jpg" alt="Content 3")
-      div(class="content-slider__wrap-desc")
-        h2(class="content-slider__title") Content 3
-        p(class="content-slider__desc") Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie
-        a(class="content-slider__link" href="content.html") En savoir plus
-div(class="content-slider__wrap-pointer")
-  span(class="content-slider__pointer content-slider__pointer--active")
-  span(class="content-slider__pointer")
-  span(class="content-slider__pointer")
-  span(class="content-slider__pointer")
+div(class="wrap")
+  div(class="glide")
+    div(class="glide__track" data-glide-el="track")
+      ul(class="content-slider__list glide__slides")
+        li(class="content-slider__item glide__slide")
+          article(class="content-slider__article")
+            img(src="img/home-page/content-1.jpg" alt="Content 1")
+            div(class="content-slider__wrap-desc")
+              h2(class="content-slider__title") Content 1
+              p(class="content-slider__desc") Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie
+              a(class="content-slider__link" href="content.html") En savoir plus
+        li(class="content-slider__item glide__slide")
+          article(class="content-slider__article")
+            img(src="img/home-page/content-2.jpg" alt="Content 2")
+            div(class="content-slider__wrap-desc")
+              h2(class="content-slider__title") Content 2
+              p(class="content-slider__desc") Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie
+              a(class="content-slider__link" href="content.html") En savoir plus
+        li(class="content-slider__item glide__slide")
+          article(class="content-slider__article")
+            img(src="img/home-page/content-3.jpg" alt="Content 3")
+            div(class="content-slider__wrap-desc")
+              h2(class="content-slider__title") Content 3
+              p(class="content-slider__desc") Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie
+              a(class="content-slider__link" href="content.html") En savoir plus
+        li(class="content-slider__item glide__slide")
+          article(class="content-slider__article")
+            img(src="img/home-page/content-3.jpg" alt="Content 3")
+            div(class="content-slider__wrap-desc")
+              h2(class="content-slider__title") Content 3
+              p(class="content-slider__desc") Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie
+              a(class="content-slider__link" href="content.html") En savoir plus
+      div(class="content-slider__wrap-pointer glide__bullets" data-glide-el="controls[nav]")
+        span(class="content-slider__pointer glide__bullet" data-glide-dir="=0")
+        span(class="content-slider__pointer glide__bullet" data-glide-dir="=1")
+        span(class="content-slider__pointer glide__bullet" data-glide-dir="=2")
+        span(class="content-slider__pointer glide__bullet" data-glide-dir="=3")
+
+//- div(class="glide")
+//-   div(class="glide__track" data-glide-el="track")
+  //-   ul(class="glide__slides")
+  //-       li(class="glide__slide") 0
+  //-       li(class="glide__slide") 1
+  //-       li(class="glide__slide") 2
+//-   div(class="glide__bullets" data-glide-el="controls[nav]")
+//-     button(class="glide__bullet" data-glide-dir="=0")
+//-     button(class="glide__bullet" data-glide-dir="=1")
+//-     button(class="glide__bullet" data-glide-dir="=2")
     

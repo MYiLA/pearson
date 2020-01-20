@@ -57,7 +57,8 @@ gulp.task('clean', () => {
 gulp.task('copy', () => {
   return gulp.src([
       'source/fonts/*',
-      'source/img/**'
+      'source/img/**',
+      'source/glide/**'
     ], {
       base: 'source'
     })

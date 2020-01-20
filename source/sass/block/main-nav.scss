@@ -1,23 +1,29 @@
 .main-nav {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
+
   &--close {
-   & .main-nav__wrap-popup {
-    display: none;
+    & .main-nav__wrap-popup {
+      display: none;
     }
   }
+
   &--open {
     & .main-nav__wrap-popup {
       display: flex;
-      }
+    }
   }
 }
 
 .main-nav__bookmark-wrap {
-  display: flex;
   background-color: $blue-light;
-  padding-left: 15px;
-  padding-right: 20px;
-  padding-top: 6px;
+
+  & .wrap {
+    display: flex;
+    padding-left: 15px;
+    padding-right: 20px;
+    padding-top: 6px;
+  }
+
 }
 
 .main-nav__bookmark-list {
@@ -78,12 +84,15 @@
 
 .main-nav__wrap {
   background-color: $white;
-  padding: 20px;
+  
+  & .wrap {
+ padding: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  }
 }
 
 .main-nav__logo {
@@ -210,9 +219,11 @@
 
 @media (min-width: $tablet-width) {
 
-  .main-nav__bookmark-wrap {
-    padding-left: 52px;
-    padding-right: 52px;
+  .main-nav {
+    & .wrap {
+      padding-left: 52px;
+      padding-right: 52px;
+    }
   }
 
   .main-nav__bookmark-item {
@@ -235,9 +246,11 @@
   }
 
   .main-nav__wrap {
-    padding: 50px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+    & .wrap {
+      padding: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    }
   }
 
   .main-nav__logo {
