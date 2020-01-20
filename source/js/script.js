@@ -92,6 +92,8 @@ var closeMainMenu = function () {
   var closeMenu = function () {
     mainNavElement.classList.remove('main-nav--open');
     mainNavElement.classList.add('main-nav--close');
+    wrapNavElement.classList.remove('dissolve-hidden');
+    popupNavElement.classList.remove('roll-right-hidden');
   }
 
   wrapNavElement.classList.remove('dissolve-show');
