@@ -42,7 +42,8 @@
   border-radius: 3px 3px 0 0;
   text-align: center;
   background-color: $blue-light;
-  transition: 0.3s;
+  cursor: pointer;
+  transition: 0.6s;
 
   &.active {
     background-color: $white;
@@ -84,14 +85,14 @@
 
 .main-nav__wrap {
   background-color: $white;
-  
+
   & .wrap {
- padding: 20px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    padding: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -158,6 +159,8 @@
   align-content: flex-start;
   text-align: right;
   padding: 25px;
+  padding-top: 20px;
+  transition: 0.6s;
 }
 
 .main-nav__list {
@@ -181,10 +184,10 @@
 .main-nav__close {
   order: -1;
   position: relative;
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   border: none;
   background-color: transparent;
   transition: 0.3s;
@@ -194,16 +197,16 @@
   &::after {
     content: '';
     position: absolute;
-    width: 25px;
+    width: 35px;
     height: 2px;
-    top: 0;
-    right: 0;
+    top: 50%;
+    right: 50%;
     background-color: $blue-dark;
-    transform: rotate(45deg);
+    transform: translate(50%) rotate(45deg);
   }
 
   &::before {
-    transform: rotate(-45deg);
+    transform: translate(50%) rotate(-45deg);
   }
 
   &:focus,
@@ -248,8 +251,8 @@
   .main-nav__wrap {
     & .wrap {
       padding: 50px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
   }
 
@@ -301,20 +304,78 @@
 
 
 
-///////////////////// Animation ///////////////////////
+///////////////////// Анимации ///////////////////////
 
-// @keyframes btn-open-before {
-//   0% {
-//     right: 0;
-//     width: 36px;
-//     top: 0;
-//     transform: none;
-//   }
+.roll-right-show {
+  animation-name: roll-right;
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
+}
 
-//   100% {
-//     right: -5px;
-//     width: 50px;
-//     top: 50%;
-//     transform: rotate(-45deg);
-//   }
-// }
+.roll-right-hidden {
+  animation-name: roll-right-rev;
+  animation-duration: 0.8s;
+  animation-direction: reverse;
+}
+
+.dissolve-hidden {
+  animation-name: dissolve-rev;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+.dissolve-show {
+  animation-name: dissolve;
+  animation-duration: 0.6s;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+}
+
+@keyframes roll-right {
+  0% {
+    transform: translateX(5000px);
+    position: absolute;
+    min-height: 2000px;
+  }
+
+  100% {
+    transform: none;
+    position: absolute;
+    min-height: 2000px;
+  }
+}
+
+@keyframes roll-right-rev {
+  0% {
+    transform: translateX(5000px);
+    position: absolute;
+    min-height: 2000px;
+  }
+
+  100% {
+    transform: none;
+    position: absolute;
+    min-height: 2000px;
+  }
+}
+
+@keyframes dissolve {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes dissolve-rev {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

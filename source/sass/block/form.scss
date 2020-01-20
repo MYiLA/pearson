@@ -1,6 +1,7 @@
 .form {
-  // @include popup;
-
+  
+  @include popup;
+  display: none;
   & input {
     @include input;
     margin-bottom: 18px;

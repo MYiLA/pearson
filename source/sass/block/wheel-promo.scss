@@ -1,11 +1,14 @@
 .wheel-promo {
   width: 100%;
   min-height: 130px;
-  display: flex;
+  display: none;
   list-style: none;
   text-align: center;
   overflow-x: auto;
   overflow-y: hidden;
+  &.active {
+    display: flex;
+  }
 
   &:hover .wheel-promo__item {
     opacity: 0.37;
@@ -62,9 +65,6 @@
   &:nth-child(1) {
     &::after {
       background-image: url(../img/icon-landing-simulations.svg);
-      // .wheel-promo__tooltip {
-      // display: block;  
-      // }
     }
   }
 
