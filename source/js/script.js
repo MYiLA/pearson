@@ -118,6 +118,8 @@ menuCloseElement.addEventListener('click', moveMenu);
 
 
 // переключение вкладок меню
+// переделать собирание в кружок на ширину 1150
+
 var superieurBookmarkElement = document.querySelector('.main-nav__bookmark-item--superieur');
 var superieurWheelElement = document.querySelector('.wheel-promo--superieur');
 
