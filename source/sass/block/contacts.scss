@@ -7,10 +7,18 @@
 }
 
 .contacts__item {
-  margin-right: 20px;
+  margin-right: 13px;
 
   &:nth-child(4n) {
     margin-right: 0;
+  }
+}
+
+.contacts__link {
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
   }
 }
 

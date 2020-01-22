@@ -1,6 +1,31 @@
 .landing-page {
+
   .provoke__contact,
-  .provoke__external {
+  .provoke__external,
+  .important__message--content,
+  & .landing-promo__wrap--homo {
     display: none;
   }
+
+  .wheel-promo__item {
+    &:hover,
+    &:focus {
+      & .wheel-promo__tooltip {
+        display: block;
+      }
+    }
+  }
+ 
+  .active.wheel-promo__item {
+
+    &:hover .wheel-promo__tooltip,
+    &:focus .wheel-promo__tooltip {
+      display: none;
+    }
+  }
+}
+
+.landing-page__provoke {
+background-color: $blue-light;
+color: #474747;
 }

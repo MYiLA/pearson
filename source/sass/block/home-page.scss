@@ -5,18 +5,26 @@
     display: none;
   }
 
-  & .landing-promo__wrap-landing {
+  & .landing-promo__wrap--landing {
     display: none;
   }
-}
 
-
-@media (min-width: 1440px) {
-  .home-page__content-reviews {
-    width: 1340px;
-    margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
+  .wheel-promo__item {
+    &:hover,
+    &:focus {
+      & .wheel-promo__tooltip {
+        display: block;
+      }
+    }
   }
-
 }
+
+  @media (min-width: 1440px) {
+    .home-page__content-reviews {
+      width: 1340px;
+      margin: 0 auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+  }

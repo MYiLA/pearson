@@ -35,3 +35,6 @@ html(lang="fr")
     script(src="js/jquery-2.2.3.min.js")
     script(src="glide/glide.min.js")
     script(src="js/script.js")
+  
+    script(type='text/javascript' defer) new Glide('.promo-slider__glide', {type: 'carousel',startAt: 0, perView: 1, gap: 20, autoplay: 4000, dragThreshold: 50, animationDuration: 1000, animationTimingFunc: 'cubic-bezier(.36,.39,.31,1.02)', peek: { before: 60, after: 60 }, breakpoints: { 900: {perView: 1 },550: {perView: 1}},}).mount();
+    script(type='text/javascript' defer) new Glide('.product__slider', {type: 'carousel',startAt: 0, perView: 1, gap: 45, autoplay: 5500, dragThreshold: 50, animationDuration: 1000, animationTimingFunc: 'cubic-bezier(.36,.39,.31,1.02)', peek: { before: 90, after: 90 }, breakpoints: { 900: {perView: 1 },550: {perView: 1}},}).mount();

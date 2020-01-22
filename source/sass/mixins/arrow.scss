@@ -1,6 +1,6 @@
 @mixin arrow {
   display: block;
-  position: relative;
+  position: absolute;
   width: 44px;
   height: 44px;
   border: none;
@@ -36,7 +36,7 @@
   }
 
   &::after{
-    top: 38%;
+    top: 39%;
     left: 28%;
     transform: rotate(-45deg) ;
     width: 11px;

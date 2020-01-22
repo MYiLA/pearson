@@ -1,21 +1,28 @@
-h2 Nos titres en FastTrack
+h2(class="product__title") Nos titres en FastTrack
 div(class="product__wrap")
-  button(class="product__arrow product__arrow--left")
-  ul(class="product__list")
-    li(class="product__item")
-      img(src="img/landing/product-marketing.png" width="185" alt="product-test")
-      a(class="product__available" href="#") Acheter
-      span(class="product__inavailable") Bientot disponible
-    li(class="product__item")
-      img(src="img/landing/product-principes.png" width="185" alt="product-test")
-      a(class="product__available" href="#") Acheter
-      span(class="product__inavailable") Bientot disponible
-    li(class="product__item")
-      img(src="img/landing/product-management.png" width="185" alt="product-test")
-      a(class="product__available" href="#") Acheter
-      span(class="product__inavailable") Bientot disponible
-    li(class="product__item")
-      img(src="img/landing/product-strategique.png" width="185" alt="product-test")
-      a(class="product__available" href="#") Acheter
-      span(class="product__inavailable") Bientot disponible
-  button(class="product__arrow product__arrow--right")
+  div(class="product__slider")
+    div(class="glide__track" data-glide-el="track")
+      ul(class="product__list glide__slides")
+        li(class="product__item glide__slide aviable")
+          img(src="img/landing/product-marketing.png" width="185" alt="product-test")
+          a(class="product__available" href="#") Acheter
+          span(class="product__inavailable product__inavailable--gray") Bientot disponible
+          span(class="product__inavailable product__inavailable--orange") Bientot disponible
+        li(class="product__item glide__slide aviable")
+          img(src="img/landing/product-principes.png" width="185" alt="product-test")
+          a(class="product__available" href="#") Acheter
+          span(class="product__inavailable product__inavailable--gray") Bientot disponible
+          span(class="product__inavailable product__inavailable--orange") Bientot disponible
+        li(class="product__item glide__slide inaviable")
+          img(src="img/landing/product-management.png" width="185" alt="product-test")
+          a(class="product__available" href="#") Acheter
+          span(class="product__inavailable product__inavailable--gray") Bientot disponible
+          span(class="product__inavailable product__inavailable--orange") Bientot disponible
+        li(class="product__item glide__slide inaviable")
+          img(src="img/landing/product-strategique.png" width="185" alt="product-test")
+          a(class="product__available" href="#") Acheter
+          span(class="product__inavailable product__inavailable--gray") Bientot disponible
+          span(class="product__inavailable product__inavailable--orange") Bientot disponible
+    div(class="product__arrows glide__arrows" data-glide-el="controls")
+      button(class="product__arrow product__arrow--left glide__arrow glide__arrow--left" data-glide-dir="<")
+      button(class="product__arrow product__arrow--right glide__arrow glide__arrow--right" data-glide-dir=">")

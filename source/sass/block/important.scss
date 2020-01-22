@@ -1,0 +1,19 @@
+.important {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: $white;
+  text-align: center;
+}
+
+.important__message {
+  width: 350px;
+  padding: 0;
+  margin: 0 auto;
+
+  font-size: 28px;
+  line-height: 38px;
+  font-family: $font-accent;
+  color: $blue-dark;
+}

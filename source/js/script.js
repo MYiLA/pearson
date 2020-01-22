@@ -3,18 +3,19 @@ const tabletWidth = 900;
 
 // слайдеры//
 
-
+// для реализации показа активных подписей (.promo-slider__desc-item - подпись): номер слайда (promo-slider__item - слайд) = номер показываемой подписи. на активном слайде класс glide__slide--active
+// проверять текущую активную подпись каждые 1 секунду
 
 // колесо///
 
-var menus = [...document.querySelectorAll('.wheel-promo')];
+const menus = [...document.querySelectorAll('.wheel-promo')];
 menus.map((menu) => {
-  let items = menu.querySelectorAll('.wheel-promo__item');
+  const items = menu.querySelectorAll('.wheel-promo__item');
   const length = items.length;
   const arc = 2 * Math.PI * (1 / length);
   let radius = 50;
 
-  var addCoordinateItems = function (rad) {
+  let addCoordinateItems = function (rad) {
     for (let i = 0; i < length; i++) {
       const angle = i * arc - 14.15;
       const x = rad * Math.cos(angle);
@@ -25,7 +26,7 @@ menus.map((menu) => {
     }
   }
 
-  var onMenuCircularCreated = function () {
+  let onMenuCircularCreated = function () {
     if (window.innerWidth >= tabletWidth) {
       radius = 50;
       return addCoordinateItems(radius);
@@ -59,13 +60,13 @@ $(window).scroll(function () {
 
 // попап-меню
 
-var menuOpenElement = document.querySelector('.main-nav__burger');
-var menuCloseElement = document.querySelector('.main-nav__close');
-var mainNavElement = document.querySelector('.main-nav');
-var wrapNavElement = document.querySelector('.main-nav__wrap-popup');
-var popupNavElement = document.querySelector('.main-nav__main-nav');
+const menuOpenElement = document.querySelector('.main-nav__burger');
+const menuCloseElement = document.querySelector('.main-nav__close');
+const mainNavElement = document.querySelector('.main-nav');
+const wrapNavElement = document.querySelector('.main-nav__wrap-popup');
+const popupNavElement = document.querySelector('.main-nav__main-nav');
 
-var openMainMenu = function () {
+let openMainMenu = function () {
   mainNavElement.classList.remove('main-nav--close');
   mainNavElement.classList.add('main-nav--open');
 
@@ -76,8 +77,8 @@ var openMainMenu = function () {
   popupNavElement.classList.add('roll-right-show')
 };
 
-var closeMainMenu = function () {
-  var closeMenu = function () {
+let closeMainMenu = function () {
+  let closeMenu = function () {
     mainNavElement.classList.remove('main-nav--open');
     mainNavElement.classList.add('main-nav--close');
     wrapNavElement.classList.remove('dissolve-hidden');
@@ -93,7 +94,7 @@ var closeMainMenu = function () {
   setTimeout(closeMenu, 800);
 };
 
-var moveMenu = function () {
+let moveMenu = function () {
   if (mainNavElement.classList.contains('main-nav--close')) {
     openMainMenu()
   } else {
@@ -106,20 +107,19 @@ menuCloseElement.addEventListener('click', moveMenu);
 
 
 // переключение вкладок меню
-// переделать собирание в кружок на ширину 1150
 
-var superieurBookmarkElement = document.querySelector('.main-nav__bookmark-item--superieur');
-var superieurWheelElement = document.querySelector('.wheel-promo--superieur');
+const superieurBookmarkElement = document.querySelector('.main-nav__bookmark-item--superieur');
+const superieurWheelElement = document.querySelector('.wheel-promo--superieur');
 
-var etrangereBookmarkElement = document.querySelector('.main-nav__bookmark-item--etrangere');
-var etrangereWheelElement = document.querySelector('.wheel-promo--etrangere');
+const etrangereBookmarkElement = document.querySelector('.main-nav__bookmark-item--etrangere');
+const etrangereWheelElement = document.querySelector('.wheel-promo--etrangere');
 
-var toggleElements = function (openElement, closeElement) {
+let toggleElements = function (openElement, closeElement) {
   openElement.classList.add('active');
   closeElement.classList.remove('active');
 }
 
-var activateSuperieur = function () {
+let activateSuperieur = function () {
   superieurBookmarkElement.classList.add('active');
   etrangereBookmarkElement.classList.remove('active');
   
@@ -136,7 +136,7 @@ var activateSuperieur = function () {
   setTimeout(closeMenu, 600);
 }
 
-var activateEtrangere = function () {
+let activateEtrangere = function () {
   etrangereBookmarkElement.classList.add('active');
   superieurBookmarkElement.classList.remove('active');
   
@@ -154,6 +154,7 @@ var activateEtrangere = function () {
 
 superieurBookmarkElement.addEventListener('click', activateSuperieur);
 etrangereBookmarkElement.addEventListener('click', activateEtrangere);
+
 // попап форма
 
 
