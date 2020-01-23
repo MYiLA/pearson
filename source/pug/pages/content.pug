@@ -5,7 +5,9 @@ html(lang="fr")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
     title Pearson
-    //- link (rel="preload" href="fonts/roboto-medium.woff2" as="font" crossorigin="anonymous")
+    link(rel="preload" href="fonts/opensans-regular.woff2" as="font" crossorigin="anonymous")
+    link(rel="preload" href="fonts/opensans-semibold.woff2" as="font" crossorigin="anonymous")
+    link(rel="preload" href="fonts/playfairdisplay-regular.woff2" as="font" crossorigin="anonymous")
     link(rel="stylesheet" href="glide/glide.core.min.css")
     link(rel="stylesheet" href="css/style.min.css")
     script(src="js/picturefill.js")
@@ -15,9 +17,7 @@ html(lang="fr")
 
     main(class="content-page")
       div(class="content-page__cover")
-        picture
-          source(media="(min-width: 600px)" srcset="img/content/content-cover.jpg")
-          img(src="img/content/content-cover-mobile.jpg" alt="image de titre")
+        img(src="img/content/content-cover.jpg" alt="image de titre")
       h1(class="content-page__title") Titre de la page
       p(class="content-page__desc") Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam 
       div(class="content-page__important important")

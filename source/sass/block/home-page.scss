@@ -9,22 +9,25 @@
     display: none;
   }
 
-  .wheel-promo__item {
-    &:hover,
-    &:focus {
-      & .wheel-promo__tooltip {
-        display: block;
+  @media (min-width: $tablet-width) {
+    .wheel-promo__item {
+
+      &:hover,
+      &:focus {
+        & .wheel-promo__tooltip {
+          display: block;
+        }
       }
     }
   }
 }
 
-  @media (min-width: 1440px) {
-    .home-page__content-reviews {
-      width: 1340px;
-      margin: 0 auto;
-      padding-left: 0;
-      padding-right: 0;
-    }
-
+@media (min-width: 1440px) {
+  .home-page__content-reviews {
+    width: 1340px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
   }
+
+}

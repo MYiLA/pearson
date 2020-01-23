@@ -9,18 +9,23 @@
 
   .wheel-promo__item {
     opacity: 0.37;
-    &:hover,
-    &:focus {
-      & .wheel-promo__tooltip {
-        display: block;
+
+    @media (min-width: $tablet-width) {
+
+      &:hover,
+      &:focus {
+        & .wheel-promo__tooltip {
+          display: block;
+        }
       }
     }
   }
- 
+
   .active.wheel-promo__item {
     transform: scale(1.2);
     z-index: 0;
     opacity: 1;
+
     &:hover .wheel-promo__tooltip,
     &:focus .wheel-promo__tooltip {
       display: none;
@@ -33,6 +38,6 @@
 }
 
 .landing-page__provoke {
-background-color: $blue-light;
-color: #474747;
+  background-color: $blue-light;
+  color: #474747;
 }

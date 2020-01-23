@@ -2,6 +2,7 @@
   display: none;
   position: relative;
   overflow-y: hidden;
+  min-height: 180px;
 
   &.active {
     display: flex;
@@ -18,20 +19,20 @@
     height: 10px;
     background-color: transparent;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .1);
-    top: 40px;
+    top: 18px;
     left: 0;
     transition: 0.6s;
   }
 }
 
 .wheel-promo__list {
-  position: relative;
+  position: absolute;
   width: 100%;
   min-height: 130px;
   padding: 0;
   margin: 0;
-  padding-bottom: 20px;
-  margin-bottom: -20px;
+  padding-bottom: 35px;
+  margin-bottom: -35px;
   display: none;
   list-style: none;
   text-align: center;
@@ -157,7 +158,7 @@
 
 .wheel-promo__tooltip {
   display: none;
-  width: 230px;
+  width: 250px;
   position: absolute;
   top: 24px;
   font-size: 11px;
@@ -177,8 +178,6 @@
     width: 34%;
     height: 35%;
     overflow-y: visible;
-    // margin-left: 35px;
-    // margin-right: 35px;
 
     &::after {
       display: none;
@@ -223,8 +222,8 @@
     transform-origin: center;
     transform: scale(0.8) translate(-64%, -58%);
 
-    &::before,
-    &::after {
+    .wheel-promo__link::before,
+    .wheel-promo__link::after {
       content: "";
       position: absolute;
       width: 54px;
@@ -244,7 +243,7 @@
 
     .wheel-promo & .wheel-promo__tooltip {
       top: 35px;
-      left: -222px;
+      left: -230px;
     }
   }
 }
