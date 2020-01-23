@@ -1,8 +1,8 @@
 .provoke {
   padding-top: 75px;
   padding-bottom: 75px;
-  padding-left: 20px;
-  padding-right: 20px;
+  // padding-left: 20px;
+  // padding-right: 20px;
   background-color: $blue-dark;
   color: white;
 }
@@ -10,7 +10,7 @@
 .provoke__text {
   margin: 0 auto;
   margin-bottom: 40px;
-  max-width: 350px;
+  max-width: 80%;
   font-size: 28px;
   line-height: 37px;
   font-family: $font-accent;
@@ -24,26 +24,22 @@
   background-color: $green;
 }
 
-.provoke {
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
 @media (min-width: $tablet-width) {
   .provoke {
     & .provoke__text {
-      max-width: none;
+      max-width: 70%;
       width: auto;
     }
   }
 
-  .provoke__contact .provoke__link {
+  .provoke__item .provoke__link {
     width: 225px;
+    max-width: 23%;
   }
 }
 
 @media (min-width: 1050px) {
-  .provoke__contact {
+  .provoke__item {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

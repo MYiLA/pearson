@@ -28,11 +28,7 @@
 
 .media__play {
   @include play-button;
-  position: absolute;
   z-index: 1;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   opacity: 1;
   pointer-events: auto;
 }
@@ -42,8 +38,28 @@
     opacity: 0;
     pointer-events: none;
   }
+
   .media__figure::after {
     opacity: 0;
     pointer-events: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+
+  
+  .media__figure {
+    height: 500px;
+    width: auto;
+    overflow: hidden;
+  }
+
+  .media__video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
   }
 }

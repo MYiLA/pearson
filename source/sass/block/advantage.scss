@@ -1,8 +1,8 @@
 .advantage {
   background-color: $light-bg;
   padding-top: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
+  // padding-left: 20px;
+  // padding-right: 20px;
   padding-bottom: 110px;
   text-align: center;
 }
@@ -102,7 +102,7 @@
   width: 100%;
   line-height: 30px;
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0 auto;
   margin-top: 0;
   margin-bottom: 20px;
@@ -123,9 +123,9 @@
   }
 }
 
-@media (min-width: $tablet-width) {
-  .advantage {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
+// @media (min-width: $tablet-width) {
+//   .advantage {
+//     padding-left: 50px;
+//     padding-right: 50px;
+//   }
+// }

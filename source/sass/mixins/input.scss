@@ -40,8 +40,4 @@
   &:disabled { 
     box-shadow: 0 0 0 1px $red;
   }
-
-  &.invalid {
-    box-shadow: 0 0 0 1px $red;
-  }
 }

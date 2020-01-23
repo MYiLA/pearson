@@ -1,8 +1,8 @@
 
 .content-reviews {
   padding-top: 50px;
-  padding-left: 15px;
-  padding-right: 15px;
+  // padding-left: 15px;
+  // padding-right: 15px;
 }
 
 .content-reviews__wrap {
@@ -95,9 +95,12 @@
 }
 
 @media (min-width: $tablet-width) {
-    .content-reviews {
-    padding-left: 50px;
-    padding-right: 50px;
+  .content-reviews__title {
+    max-width: 70%;
+    font-size: 36px;
+  }
+    .content-reviews__more {
+    font-size: 13px;
   }
 }
 

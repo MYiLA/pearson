@@ -122,15 +122,15 @@ let toggleElements = function (openElement, closeElement) {
 let activateSuperieur = function () {
   superieurBookmarkElement.classList.add('active');
   etrangereBookmarkElement.classList.remove('active');
-  
-  let closeMenu = function() {
+
+  let closeMenu = function () {
     superieurWheelElement.classList.add('active');
     etrangereWheelElement.classList.remove('active');
   }
-   superieurWheelElement.classList.remove('dissolve-hidden');
-   etrangereWheelElement.classList.add('dissolve-hidden');
+  superieurWheelElement.classList.remove('dissolve-hidden');
+  etrangereWheelElement.classList.add('dissolve-hidden');
 
-   etrangereWheelElement.classList.remove('dissolve-show');
+  etrangereWheelElement.classList.remove('dissolve-show');
   superieurWheelElement.classList.add('dissolve-show');
 
   setTimeout(closeMenu, 600);
@@ -139,8 +139,8 @@ let activateSuperieur = function () {
 let activateEtrangere = function () {
   etrangereBookmarkElement.classList.add('active');
   superieurBookmarkElement.classList.remove('active');
-  
-  let closeMenu = function() {
+
+  let closeMenu = function () {
     etrangereWheelElement.classList.add('active');
     superieurWheelElement.classList.remove('active');
   }
@@ -148,7 +148,7 @@ let activateEtrangere = function () {
   superieurWheelElement.classList.add('dissolve-hidden');
 
   superieurWheelElement.classList.remove('dissolve-show');
-   etrangereWheelElement.classList.add('dissolve-show');
+  etrangereWheelElement.classList.add('dissolve-show');
   setTimeout(closeMenu, 600);
 }
 
@@ -162,3 +162,5 @@ etrangereBookmarkElement.addEventListener('click', activateEtrangere);
 
 
 // попап видео
+
+// обновление скрипта при изменении окна браузера( тупит слайдер)

@@ -1,5 +1,8 @@
 @mixin play-button {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 60px;
   height: 60px;
   background-color: $white;
@@ -14,10 +17,17 @@
     position: absolute;
     left: 55%;
     top:50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate(-50%, -50%);
     border-color: transparent;
     border-left-color: $green;
     border-right: none;
-    
+  }
+
+  @media (min-width: 650px) {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+
+  @media (min-width: 1300px) {
+    transform: translate(-50%, -50%) scale(2);
   }
 }

@@ -1,13 +1,8 @@
 .content-page {
-  .provoke__contact,
-  .provoke__video,
+  .provoke__item--contact,
+  .provoke__item--video,
   .important__message--landing {
     display: none;
-  }
-
-  .important__message {
-    font-size: 24px;
-    line-height: 32px;
   }
 }
 
@@ -15,18 +10,12 @@
   margin-top: -7px;
   position: relative;
   width: 100%;
-  min-height: 420px;
-  overflow: hidden;
+  margin-bottom: 90px;
 
   img {
-    position: absolute;
-    height: 100%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
   }
-
-  margin-bottom: 90px;
 
   &::before {
       content: "";
@@ -42,19 +31,23 @@
 }
 
 .content-page__title {
-  margin-left: 20px;
-  margin-right: 20px;
+  max-width: 790px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-weight: 400;
   font-family: $font-accent;
-  line-height: 32px;
-  font-size: 42px;
+  font-size: 32px;
+  line-height: 52px;
+  margin: 0 auto;
   margin-bottom: 70px;
   color: $blue-black;
 }
 
 .content-page__desc {
-  margin-left: 20px;
-  margin-right: 20px;
+  max-width: 790px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
   margin-bottom: 80px;
 }
 
@@ -67,4 +60,51 @@
 
 .content-page__infographics {
   padding-top: 75px;
+}
+
+@media (min-width: 600px) {
+  .content-page__cover {
+   height: 400px;
+  
+    img {
+      position: absolute;
+      width: auto;
+      height: 100%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .content-page__title {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 52px;
+    line-height: 62px;  
+  }
+
+  .content-page__desc {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 18px;
+    line-height: 24px;   
+  }
+}
+
+@media (min-width: 1360px) {
+  .content-page__cover {
+    overflow: hidden;
+    img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      transform: none;
+    }
+  }
 }

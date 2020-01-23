@@ -1,19 +1,107 @@
 .form {
-  
   @include popup;
   display: none;
+  z-index: 2;
+
   & input {
     @include input;
     margin-bottom: 18px;
+
+    &.invalid {
+      box-shadow: 0 0 0 1px $red;
+    }
+  }
+
+  &--video {
+    .form__desc--video {
+      display: block;
+    }
+  }
+
+  &--contact {
+    .form__desc--contact {
+      display: block;
+    }
   }
 }
 
 .form__wrap {
+  position: relative;
   padding: 18px;
+  padding-top: 70px;
+  padding-bottom: 90px;
   background-color: white;
+  text-align: center;
+}
+
+.form__title {
+  font-size: 28px;
+  line-height: 1.3em;
+  margin-bottom: 40px;
+}
+
+.form__desc {
+  display: none;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.form__form {
+  max-width: 530px;
 }
 
 .form__close {
   @include close-btn;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
+.form__submit {
+  @include btn;
+  background-color: $green;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.form__privacy {
+  position: relative;
+  display: block;
+  margin-right: 0;
+  margin-left: auto;
+  font-size: 11px;
+  width: 100%;
+  max-width: 510px;
+  padding-left: 20px;
+  color: #c9c9c9;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 0 1px #797979;
+  }
+
+  &.invalid::before {
+    box-shadow: 0 0 0 1px $red;
+  }
+}
+
+.form__privacy-checkbox:checked~.form__privacy::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  transform: rotate(-45deg);
+  width: 17px;
+  height: 7px;
+  border: solid 3px $green;
+  border-right: none;
+  border-top: none;
+}

@@ -1,3 +1,11 @@
+.popup-video {
+  @include popup;
+  display: none;
+  z-index: 2;
+}
+
+
+
 .popup-video__close {
   @include close-btn;
 }

@@ -8,7 +8,7 @@
 }
 
 .important__message {
-  width: 350px;
+  max-width: 80%;
   padding: 0;
   margin: 0 auto;
 
@@ -16,4 +16,17 @@
   line-height: 38px;
   font-family: $font-accent;
   color: $blue-dark;
+}
+
+@media (min-width: $tablet-width) {
+  .important {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .important__message {
+    max-width: 880px;
+   font-size: 32px;
+   line-height: 45px;
+  }
 }

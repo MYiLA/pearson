@@ -1,13 +1,14 @@
 .landing-page {
 
-  .provoke__contact,
-  .provoke__external,
+  .provoke__item--contact,
+  .provoke__item--external,
   .important__message--content,
   & .landing-promo__wrap--homo {
     display: none;
   }
 
   .wheel-promo__item {
+    opacity: 0.37;
     &:hover,
     &:focus {
       & .wheel-promo__tooltip {
@@ -17,10 +18,16 @@
   }
  
   .active.wheel-promo__item {
-
+    transform: scale(1.2);
+    z-index: 0;
+    opacity: 1;
     &:hover .wheel-promo__tooltip,
     &:focus .wheel-promo__tooltip {
       display: none;
+    }
+
+    @media (min-width: 900px) {
+      transform: translate(-50%, -50%) scale(1.2);
     }
   }
 }
