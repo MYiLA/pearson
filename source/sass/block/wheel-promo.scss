@@ -52,6 +52,64 @@
   outline: none;
   cursor: pointer;
 
+  &:nth-child(1) {
+    .wheel-promo__link::after {
+      background-image: url(../img/icon-landing-simulations.svg);
+    }
+  }
+
+  &:nth-child(2) {
+    .wheel-promo__link::after {
+      background-image: url(../img/icon-landing-apps.svg);
+    }
+  }
+
+  &:nth-child(3) {
+    .wheel-promo__link::after {
+      background-image: url(../img/icon-landing-ebooks.svg);
+    }
+  }
+
+  &:nth-child(4) {
+    .wheel-promo__link::after {
+      background-image: url(../img/icon-landing-mesure.svg);
+    }
+  }
+
+  &:nth-child(5) {
+    .wheel-promo__link::after {
+      background-image: url(../img/icon-landing-librairie.svg);
+    }
+  }
+
+  &:nth-child(6) {
+    .wheel-promo__link::after {
+      background-image: url(../img/icon-landing-labs.svg);
+    }
+  }
+
+  &:nth-child(1),
+  &:nth-last-child(3) {
+    .wheel-promo__tooltip {
+      left: 10px;
+    }
+  }
+
+  &:nth-child(2),
+  &:nth-last-child(2) {
+    .wheel-promo__tooltip {
+      left: -86px;
+    }
+  }
+
+  &:nth-child(3),
+  &:nth-last-child(1),
+  & {
+    .wheel-promo__tooltip {
+      left: -162px;
+    }
+  }
+
   .wheel-promo:hover & {
     opacity: 0.37;
   }
@@ -60,6 +118,16 @@
   .wheel-promo &:focus {
     transform: scale(1.2);
     z-index: 1;
+    opacity: 1;
+  }
+}
+
+.wheel-promo__link {
+  position: relative;
+  padding-top: 65px;
+
+  &:hover,
+  &:focus {
     opacity: 1;
   }
 
@@ -71,7 +139,7 @@
     height: 54px;
     border-radius: 50%;
     opacity: 0.37;
-    top: 65px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -84,64 +152,6 @@
     background-repeat: no-repeat;
     background-position: 50%;
     opacity: 1;
-  }
-
-  &:nth-child(1) {
-    &::after {
-      background-image: url(../img/icon-landing-simulations.svg);
-    }
-  }
-
-  &:nth-child(2) {
-    &::after {
-      background-image: url(../img/icon-landing-apps.svg);
-    }
-  }
-
-  &:nth-child(3) {
-    &::after {
-      background-image: url(../img/icon-landing-ebooks.svg);
-    }
-  }
-
-  &:nth-child(4) {
-    &::after {
-      background-image: url(../img/icon-landing-mesure.svg);
-    }
-  }
-
-  &:nth-child(5) {
-    &::after {
-      background-image: url(../img/icon-landing-librairie.svg);
-    }
-  }
-
-  &:nth-child(6) {
-    &::after {
-      background-image: url(../img/icon-landing-labs.svg);
-    }
-  }
-
-  &:nth-child(1),
-  &:nth-last-child(3) {
-    & .wheel-promo__tooltip {
-      left: 10px;
-    }
-  }
-
-  &:nth-child(2),
-  &:nth-last-child(2) {
-    & .wheel-promo__tooltip {
-      left: -86px;
-    }
-  }
-
-  &:nth-child(3),
-  &:nth-last-child(1),
-  & {
-    & .wheel-promo__tooltip {
-      left: -162px;
-    }
   }
 }
 
