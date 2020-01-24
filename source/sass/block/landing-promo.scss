@@ -147,10 +147,11 @@
   .landing-promo {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    min-height: 565px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: auto;
   }
 
   .landing-promo__wrap--landing {
@@ -193,21 +194,11 @@
   }
 }
 
-@media (min-width: 1070px) {
-  .landing-promo {
-    min-height: 700px;
-  }
-}
-
 @media (min-width: 1250px) {
 
   .landing-promo__title {
     max-width: 668px;
     font-size: 52px;
     line-height: 71px;
-  }
-
-  .landing-promo {
-    min-height: 818px;
   }
 }
