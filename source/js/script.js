@@ -229,6 +229,6 @@ const showSlidesCaption = function () {
   };
 }
 
-let timerId = setInterval(() => showSlidesCaption(), 3000);
+let timerId = setInterval(() => showSlidesCaption(), 1000);
 
 // проверять текущую активную подпись каждые 2 секунды
