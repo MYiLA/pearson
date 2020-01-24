@@ -9,13 +9,9 @@
 .content-page__cover {
   margin-top: -7px;
   position: relative;
+  height: 415px;
   width: 100%;
   margin-bottom: 90px;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
 
   &::before {
       content: "";
@@ -65,15 +61,6 @@
 @media (min-width: 600px) {
   .content-page__cover {
    height: 400px;
-  
-    img {
-      position: absolute;
-      width: auto;
-      height: 100%;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
   }
 }
 
@@ -96,10 +83,11 @@
 @media (min-width: 1360px) {
   .content-page__cover {
     overflow: hidden;
-    img {
+    height: 415px;
+    & img {
       position: absolute;
-      width: 100%;
-      height: auto;
+      width: auto;
+      height: 100%;
       left: 0;
       top: 0;
       right: 0;

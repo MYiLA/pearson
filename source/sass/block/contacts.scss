@@ -17,10 +17,16 @@
 .contacts__link {
   width: 100%;
   img {
-    width: 100%;
-    height: auto;
+    width: 42px;
+    height: 100%;
+  }
+  &--instagram{
+    img {
+     width: auto; 
+    }
   }
 }
+
 
 @media (min-width: 1050px) {
   .contacts {

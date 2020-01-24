@@ -10,7 +10,7 @@ html(lang="fr")
     link(rel="preload" href="fonts/playfairdisplay-regular.woff2" as="font" crossorigin="anonymous")
     link(rel="stylesheet" href="glide/glide.core.min.css")
     link(rel="stylesheet" href="css/style.min.css")
-    script(src="js/picturefill.js")
+    
   body
     include ../modules/header
 
@@ -34,6 +34,7 @@ html(lang="fr")
     include ../modules/popup-video
     include ../modules/form
 
+    script(src="js/polyfill.min.js")
     script(src="js/jquery-2.2.3.min.js")
     script(src="glide/glide.min.js")
     script(src="js/script.js")

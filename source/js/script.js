@@ -1,4 +1,5 @@
 'use strict';
+
 const tabletWidth = 900;
 
 // слайдеры//

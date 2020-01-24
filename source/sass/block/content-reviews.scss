@@ -9,6 +9,23 @@
   margin-bottom: 50px;
 }
 
+.content-reviews__wrap-img {
+  width: 100%;
+  min-height: 385px;
+  position: relative;
+  flex-basis: 50%;
+  margin-bottom: 30px;
+  overflow: hidden;
+  & img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .content-reviews__title {
   margin: 0 auto;
   text-align: center;
@@ -18,14 +35,6 @@
   font-family: $font-accent;
   font-weight: 400;
   color: $blue-black;
-}
-
-.content-reviews__wrap-img {
-  margin-bottom: 30px;
-  width: 100%;
-  & img {
-  width: 100%;
-  }
 }
 
 .content-reviews__wrap-desc {

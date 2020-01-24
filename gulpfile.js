@@ -18,6 +18,7 @@ var htmlmin = require('gulp-htmlmin')
 var autoprefixer = require('autoprefixer');
 var pug = require('gulp-pug');
 var htmlBeautify = require('gulp-html-beautify');
+const babel = require('gulp-babel');
 
 gulp.task('htmlBeautify', () => {
   return gulp.src('temp/pug/*.html')
@@ -34,13 +35,19 @@ gulp.task('htmlBeautify', () => {
     .pipe(gulp.dest('temp'))
 });
 
-// gulp.task('pug', () => {
-//   return gulp.src('source/pug/pages/*.pug')
-//     .pipe(pug({
-//       pretty: true
-//     }))
-//     .pipe(gulp.dest('source/pug/pages'))
-// });
+gulp.task('js', () => {
+  return gulp.src('source/js/**')
+    .pipe(babel({
+      presets: ['@babel/preset-env']
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js'))
+});
+
+gulp.task('copy-polyfill', () => {
+  return gulp.src('node_modules/@babel/polyfill/dist/polyfill.min.js')
+    .pipe(gulp.dest('build/js/'));
+});
 
 gulp.task('pug', () => {
   return gulp.src('source/pug/pages/*.pug')
@@ -64,12 +71,6 @@ gulp.task('copy', () => {
     })
     .pipe(gulp.dest('build'));
 });
-
-gulp.task('js', () => {
-  return gulp.src('source/js/**')
-    .pipe(uglify())
-    .pipe(gulp.dest('build/js'))
-})
 
 gulp.task('css', () => {
   return gulp.src('source/sass/style.scss')
@@ -149,6 +150,7 @@ gulp.task('build', gulp.series(
   'htmlBeautify',
   'copy',
   'js',
+  'copy-polyfill',
   'css',
   'sprite',
   'html'
