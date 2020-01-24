@@ -151,7 +151,7 @@ const videoSubmitElement = document.querySelector('.form__submit');
 videoNavOpenElement.addEventListener('click', onClickNavVideo);
 videoCloseElement.addEventListener('click', onClickNavVideo);
 videoPromoElement.addEventListener('click', onClickNavVideo);
-videoLandingElement.addEventListener('click', onClickNavVideo);
+// videoLandingElement.addEventListener('click', onClickNavVideo);
 videoProvokeElement.addEventListener('click', onClickNavVideo);
 videoSubmitElement.addEventListener('click', function (evt) {
   evt.preventDefault();
