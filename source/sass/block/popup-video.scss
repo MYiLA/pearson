@@ -1,7 +1,13 @@
 .popup-video {
   @include popup;
-  display: none;
-  z-index: 2;
+  
+  z-index: 3;
+  &--close{
+    display: none;
+  }
+  &--open{
+    display: block;
+  }
 }
 
 .popup-video__wrap {

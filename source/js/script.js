@@ -101,38 +101,67 @@ const popupNavElement = document.querySelector('.main-nav__main-nav');
 // меню
 
 let onClickMoveMenu = function () {
-  event.preventDefault();
-  movePopup(popupNavElement, wrapNavElement, mainNavElement, 'main-nav--open', 'main-nav--close') 
- } 
+  movePopup(popupNavElement, wrapNavElement, mainNavElement, 'main-nav--open', 'main-nav--close')
+}
 
 menuOpenElement.addEventListener('click', onClickMoveMenu);
 menuCloseElement.addEventListener('click', onClickMoveMenu);
 
 // форма
 
-
 const formCloseElement = document.querySelector('.form__close');
 const formNavOpenElement = document.querySelector('.main-nav__contact');
 const mainFormElement = document.querySelector('.form');
 const popupFormElement = document.querySelector('.form__wrap');
 
-
 let onClickNavForm = function () {
-  event.preventDefault();
-  movePopup(popupFormElement, mainFormElement, mainFormElement, 'form--open', 'form--close') 
- } 
+  movePopup(popupFormElement, mainFormElement, mainFormElement, 'form--open', 'form--close')
+}
 
 formCloseElement.addEventListener('click', onClickNavForm);
 formNavOpenElement.addEventListener('click', onClickNavForm);
-// landing-promo__btn--form
-// provoke__link--form
+
+const formLandingElement = document.querySelector('.landing-promo__btn--form-1');
+const provokeElement = document.querySelector('.provoke__link--form');
+const promoBtnElement = document.querySelector('.landing-promo__btn--form-2');
+
+formLandingElement.addEventListener('click', onClickNavForm);
+provokeElement.addEventListener('click', onClickNavForm);
+promoBtnElement.addEventListener('click', onClickNavForm);
 
 // видео
+// видео
+
+const videoCloseElement = document.querySelector('.popup-video__close');
+const videoNavOpenElement = document.querySelector('.popup-video');
+const mainVideoElement = document.querySelector('.popup-video');
+const popupVideoElement = document.querySelector('.popup-video__wrap');
 
 
+let onClickNavVideo = function () {
+  movePopup(popupVideoElement, mainVideoElement, mainVideoElement, 'popup-video--open', 'popup-video--close')
+}
+
+const videoPromoElement = document.querySelector('.landing-promo__btn--video');
+const videoLandingElement = document.querySelector('.landing-media__btn');
+const videoProvokeElement = document.querySelector('.provoke__link--video');
+const videoSubmitElement = document.querySelector('.form__submit');
+
+
+videoNavOpenElement.addEventListener('click', onClickNavVideo);
+videoCloseElement.addEventListener('click', onClickNavVideo);
+videoPromoElement.addEventListener('click', onClickNavVideo);
+videoLandingElement.addEventListener('click', onClickNavVideo);
+videoProvokeElement.addEventListener('click', onClickNavVideo);
+videoSubmitElement.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  onClickNavVideo();
+});
 
 
 // переключение вкладок меню
+
+
 
 const superieurBookmarkElement = document.querySelector('.main-nav__bookmark-item--superieur');
 const superieurWheelElement = document.querySelector('.wheel-promo--superieur');
@@ -166,10 +195,11 @@ let activateEtrangere = function () {
   etrangereBookmarkElement.classList.add('active');
   superieurBookmarkElement.classList.remove('active');
 
-  let closeMenu = function () {
+  const closeMenu = function () {
     etrangereWheelElement.classList.add('active');
     superieurWheelElement.classList.remove('active');
   }
+
   etrangereWheelElement.classList.remove('dissolve-hidden');
   superieurWheelElement.classList.add('dissolve-hidden');
 
@@ -181,20 +211,24 @@ let activateEtrangere = function () {
 superieurBookmarkElement.addEventListener('click', activateSuperieur);
 etrangereBookmarkElement.addEventListener('click', activateEtrangere);
 
-// попап форма
+// слайдер//
 
+// если у .promo-slider__item:nth-child(n) есть класс glide__slide--active, то у
+// .promo-slider__desc-item:nth-child(n) добавляем класс .active
 
+const promoSlides = document.querySelectorAll('.promo-slider__item');
+const promoSliderCaptions = document.querySelectorAll('.promo-slider__desc-item');
 
+const showSlidesCaption = function () {
+  for (let i = 0; i < promoSlides.length; i++) {
+    if (promoSlides[i].classList.contains('glide__slide--active')) {
+      promoSliderCaptions.forEach(element => element.classList.remove('active'));
+      promoSliderCaptions[i].classList.add('active');
+      return
+    }
+  };
+}
 
-// попап видео
+let timerId = setInterval(() => showSlidesCaption(), 3000);
 
-
-
-
-// слайдеры//
-
-
-
-
-// для реализации показа активных подписей (.promo-slider__desc-item - подпись): номер слайда (promo-slider__item - слайд) = номер показываемой подписи. на активном слайде класс glide__slide--active
-// проверять текущую активную подпись каждые 1 секунду
+// проверять текущую активную подпись каждые 2 секунды

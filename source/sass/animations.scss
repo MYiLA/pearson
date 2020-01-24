@@ -8,6 +8,7 @@
     animation-name: roll-right-rev;
     animation-duration: 0.8s;
     animation-direction: reverse;
+    animation-timing-function: ease;
   }
   
   .dissolve-hidden {
@@ -30,23 +31,11 @@
       position: absolute;
       min-height: 2000px;
     }
-  
-    100% {
-      transform: none;
-      position: absolute;
-      min-height: 2000px;
-    }
   }
   
   @keyframes roll-right-rev {
     0% {
       transform: translateX(5000px);
-      position: absolute;
-      min-height: 2000px;
-    }
-  
-    100% {
-      transform: none;
       position: absolute;
       min-height: 2000px;
     }

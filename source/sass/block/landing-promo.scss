@@ -16,17 +16,17 @@
     @media (min-width: 390px) {
       background-image: url(../img/home-page/home-cover-bg.png);
       background-size: 300px;
-      background-position: 94% -50px;
+      background-position: 94% -66px;
     }
 
     @media (min-width: 570px) {
       background-size: 300px;
-      background-position: 94% -50px;
+      background-position: 94% -66px;
     }
 
     @media (min-width: 790px) {
       background-size: 350px;
-      background-position: 100% -100px;
+      background-position: 100% -116px;
     }
 
     @media (min-width: 900px) {
@@ -147,11 +147,15 @@
   .landing-promo {
     display: flex;
     justify-content: space-around;
-    margin-top: 200px;
-    margin-bottom: 200px;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 200px;
+    padding-bottom: 200px;
     height: auto;
+  }
+  .landing-promo__title {
+    padding-top: 8%;
+    .landing-page &{
+      padding-top: 0;
+    }
   }
 
   .landing-promo__wrap--landing {
