@@ -1,6 +1,5 @@
 .form {
   @include popup;
-  display: none;
   z-index: 2;
 
   & input {
@@ -10,6 +9,14 @@
     &.invalid {
       box-shadow: 0 0 0 1px $red;
     }
+  }
+
+  &--open {
+    display: block;
+  }
+
+  &--close {
+    display: none;
   }
 
   &--video {
@@ -32,6 +39,8 @@
   padding-bottom: 90px;
   background-color: white;
   text-align: center;
+  max-width: 930px;
+  margin: 0 auto;
 }
 
 .form__title {
@@ -49,6 +58,7 @@
 
 .form__form {
   max-width: 530px;
+  margin: 0 auto;
 }
 
 .form__close {

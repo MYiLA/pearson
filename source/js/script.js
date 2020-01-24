@@ -2,11 +2,6 @@
 
 const tabletWidth = 900;
 
-// слайдеры//
-
-// для реализации показа активных подписей (.promo-slider__desc-item - подпись): номер слайда (promo-slider__item - слайд) = номер показываемой подписи. на активном слайде класс glide__slide--active
-// проверять текущую активную подпись каждые 1 секунду
-
 // колесо///
 
 const menus = [...document.querySelectorAll('.wheel-promo')];
@@ -59,52 +54,82 @@ $(window).scroll(function () {
   }
 });
 
-// попап-меню
+// попапы 
+
+const openAnimation = function (popup, wrap) {
+  wrap.classList.remove('dissolve-hidden');
+  popup.classList.remove('roll-right-hidden');
+
+  wrap.classList.add('dissolve-show');
+  popup.classList.add('roll-right-show');
+};
+
+const closeAnimation = function (popup, wrap) {
+  wrap.classList.remove('dissolve-show');
+  popup.classList.remove('roll-right-show');
+
+  wrap.classList.add('dissolve-hidden');
+  popup.classList.add('roll-right-hidden');
+}
+
+const movePopup = function (popup, wrap, mainWrap, classOpen, classClose) {
+  if (mainWrap.classList.contains(classOpen)) {
+    const closePopup = function () {
+      mainWrap.classList.remove(classOpen);
+      mainWrap.classList.add(classClose);
+      wrap.classList.remove('dissolve-hidden');
+      popup.classList.remove('roll-right-hidden');
+    };
+    setTimeout(closePopup, 800);
+    closeAnimation(popup, wrap)
+  } else {
+    mainWrap.classList.add(classOpen);
+    mainWrap.classList.remove(classClose);
+    wrap.classList.remove('dissolve-show');
+    popup.classList.remove('roll-right-show');
+    openAnimation(popup, wrap);
+  }
+}
 
 const menuOpenElement = document.querySelector('.main-nav__burger');
 const menuCloseElement = document.querySelector('.main-nav__close');
+
 const mainNavElement = document.querySelector('.main-nav');
 const wrapNavElement = document.querySelector('.main-nav__wrap-popup');
 const popupNavElement = document.querySelector('.main-nav__main-nav');
 
-let openMainMenu = function () {
-  mainNavElement.classList.remove('main-nav--close');
-  mainNavElement.classList.add('main-nav--open');
+// меню
 
-  wrapNavElement.classList.remove('dissolve-hidden');
-  popupNavElement.classList.remove('roll-right-hidden');
+let onClickMoveMenu = function () {
+  event.preventDefault();
+  movePopup(popupNavElement, wrapNavElement, mainNavElement, 'main-nav--open', 'main-nav--close') 
+ } 
 
-  wrapNavElement.classList.add('dissolve-show');
-  popupNavElement.classList.add('roll-right-show')
-};
+menuOpenElement.addEventListener('click', onClickMoveMenu);
+menuCloseElement.addEventListener('click', onClickMoveMenu);
 
-let closeMainMenu = function () {
-  let closeMenu = function () {
-    mainNavElement.classList.remove('main-nav--open');
-    mainNavElement.classList.add('main-nav--close');
-    wrapNavElement.classList.remove('dissolve-hidden');
-    popupNavElement.classList.remove('roll-right-hidden');
-  }
+// форма
 
-  wrapNavElement.classList.remove('dissolve-show');
-  popupNavElement.classList.remove('roll-right-show');
 
-  wrapNavElement.classList.add('dissolve-hidden');
-  popupNavElement.classList.add('roll-right-hidden');
+const formCloseElement = document.querySelector('.form__close');
+const formNavOpenElement = document.querySelector('.main-nav__contact');
+const mainFormElement = document.querySelector('.form');
+const popupFormElement = document.querySelector('.form__wrap');
 
-  setTimeout(closeMenu, 800);
-};
 
-let moveMenu = function () {
-  if (mainNavElement.classList.contains('main-nav--close')) {
-    openMainMenu()
-  } else {
-    closeMainMenu()
-  };
-};
+let onClickNavForm = function () {
+  event.preventDefault();
+  movePopup(popupFormElement, mainFormElement, mainFormElement, 'form--open', 'form--close') 
+ } 
 
-menuOpenElement.addEventListener('click', moveMenu);
-menuCloseElement.addEventListener('click', moveMenu);
+formCloseElement.addEventListener('click', onClickNavForm);
+formNavOpenElement.addEventListener('click', onClickNavForm);
+// landing-promo__btn--form
+// provoke__link--form
+
+// видео
+
+
 
 
 // переключение вкладок меню
@@ -159,9 +184,17 @@ etrangereBookmarkElement.addEventListener('click', activateEtrangere);
 // попап форма
 
 
-// валидация формы
 
 
 // попап видео
 
-// обновление скрипта при изменении окна браузера( тупит слайдер)
+
+
+
+// слайдеры//
+
+
+
+
+// для реализации показа активных подписей (.promo-slider__desc-item - подпись): номер слайда (promo-slider__item - слайд) = номер показываемой подписи. на активном слайде класс glide__slide--active
+// проверять текущую активную подпись каждые 1 секунду
