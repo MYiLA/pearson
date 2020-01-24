@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pearson</title>
     <link rel="preload" href="fonts/opensans-regular.woff2" as="font" crossorigin="anonymous">
@@ -49,8 +49,9 @@
             </nav>
         </div>
     </header>
-    <main class="landing-page">
-        <section class="landing-page__landing-promo landing-promo wrap">
+    <main class="home-page">
+        <h1 class="visually-hidden">entreprise d'éducation internationale</h1>
+        <section class="home-page__landing-promo landing-promo wrap">
             <div class="landing-promo__wrap landing-promo__wrap--landing">
                 <div class="wheel-promo__tooltip">Réviser un chapitre en 45 minutes !</div>
                 <h1 class="landing-promo__title">Fast Track eBooks</h1>
@@ -116,110 +117,98 @@
                 </ul>
             </div>
         </section>
-        <div class="landing-page__important important">
-            <p class="important__message important__message--content">Lorem ipsum dolor sit amet. Contenu important à mettre en avant pour capter l’attention.</p>
-            <p class="important__message important__message--landing">J'ai besoin de maîtriser et de réviser rapidement les concepts clés sur un sujet</p>
-        </div>
-        <div class="landing-page__promo-slider promo-slider wrap">
-            <h2 class="visually-hidden">matériel clé sur le sujet</h2>
-            <div class="promo-slider__slider">
-                <div class="promo-slider__glide">
-                    <div class="promo-slider__track glide__track" data-glide-el="track">
-                        <ul class="glide__slides">
-                            <li class="promo-slider__item glide__slide">
-                                <figure class="promo-slider__media"><img src="img/landing/temp-slider-promo.png" alt="slider-test"></figure>
+        <div class="home-page__content-slider content-slider">
+            <div class="wrap">
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="content-slider__list glide__slides">
+                            <li class="content-slider__item glide__slide">
+                                <article class="content-slider__article"><img src="img/home-page/content-1.jpg" alt="Content 1">
+                                    <div class="content-slider__wrap-desc">
+                                        <h2 class="content-slider__title">Content 1</h2>
+                                        <p class="content-slider__desc">Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie</p><a class="content-slider__link" href="content.html">En savoir plus</a>
+                                    </div>
+                                </article>
                             </li>
-                            <li class="promo-slider__item glide__slide">
-                                <figure class="promo-slider__media"><img src="img/landing/temp-slider-promo.png" alt="slider-test"></figure>
+                            <li class="content-slider__item glide__slide">
+                                <article class="content-slider__article"><img src="img/home-page/content-2.jpg" alt="Content 2">
+                                    <div class="content-slider__wrap-desc">
+                                        <h2 class="content-slider__title">Content 2</h2>
+                                        <p class="content-slider__desc">Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie</p><a class="content-slider__link" href="content.html">En savoir plus</a>
+                                    </div>
+                                </article>
                             </li>
-                            <li class="promo-slider__item glide__slide">
-                                <figure class="promo-slider__media"><img src="img/landing/temp-slider-promo.png" alt="slider-test"></figure>
+                            <li class="content-slider__item glide__slide">
+                                <article class="content-slider__article"><img src="img/home-page/content-3.jpg" alt="Content 3">
+                                    <div class="content-slider__wrap-desc">
+                                        <h2 class="content-slider__title">Content 3</h2>
+                                        <p class="content-slider__desc">Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie</p><a class="content-slider__link" href="content.html">En savoir plus</a>
+                                    </div>
+                                </article>
+                            </li>
+                            <li class="content-slider__item glide__slide">
+                                <article class="content-slider__article"><img src="img/home-page/content-3.jpg" alt="Content 3">
+                                    <div class="content-slider__wrap-desc">
+                                        <h2 class="content-slider__title">Content 3</h2>
+                                        <p class="content-slider__desc">Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie</p><a class="content-slider__link" href="content.html">En savoir plus</a>
+                                    </div>
+                                </article>
                             </li>
                         </ul>
-                    </div>
-                    <div class="promo-slider__arrows glide__arrows" data-glide-el="controls">
-                        <button class="promo-slider__arrow promo-slider__arrow--left glide__arrow glide__arrow--left" type="button" data-glide-dir="&lt;"></button>
-                        <button class="promo-slider__arrow promo-slider__arrow--right glide__arrow glide__arrow--right" type="button" data-glide-dir="&gt;"></button>
+                        <div class="content-slider__wrap-pointer glide__bullets" data-glide-el="controls[nav]"><span class="content-slider__pointer glide__bullet" data-glide-dir="=0"></span><span class="content-slider__pointer glide__bullet" data-glide-dir="=1"></span><span class="content-slider__pointer glide__bullet" data-glide-dir="=2"></span><span class="content-slider__pointer glide__bullet" data-glide-dir="=3"></span></div>
                     </div>
                 </div>
             </div>
-            <div class="promo-slider__desc-wrap">
-                <ul class="promo-slider__desc-list">
-                    <li class="promo-slider__desc-item active">
-                        <h3 class="promo-slider__title">Point 1</h3>
-                        <p class="promo-slider__desc">Paragraphe. Texte intégral de l'ouvrage toujours disponible surParagraphe. Texte intégral de l'ouvrage toujours disponible sur</p>
+        </div>
+        <section class="home-page__content-reviews content-reviews wrap">
+            <h2 class="content-reviews__title">Découvrez les cas de nos clients</h2>
+            <div class="content-reviews__wrap content-reviews__wrap--left">
+                <div class="content-reviews__wrap-img"><img src="img/home-page/reviews-desktop.jpg" alt="test-img"></div>
+                <div class="content-reviews__wrap-desc"><img src="img/home-page/logo-emlyon-red.png" width="78" alt="logo emlyon">
+                    <h3 class="content-reviews__desc-title">Solutions sur-mesures pour EM Lyon</h3>
+                    <p class="content-reviews__desc-desc">Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie</p><a class="content-reviews__more" href="content.html">Learn more</a>
+                </div>
+            </div>
+            <div class="content-reviews__wrap content-reviews__wrap--right">
+                <div class="content-reviews__wrap-img"><img src="img/home-page/reviews-desktop.jpg" alt="test-img"></div>
+                <div class="content-reviews__wrap-desc"><img src="img/home-page/logo-mbs-dark.svg" width="78" alt="logo emlyon">
+                    <h3 class="content-reviews__desc-title">Offre numérique pour Montpellier BS</h3>
+                    <p class="content-reviews__desc-desc">Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie Texte intégral de l'ouvrage toujours disponible sur tous les supports, online et offline, pour une lecture approfondie</p><a class="content-reviews__more" href="content.html">Learn more</a>
+                </div>
+            </div>
+        </section>
+        <section class="home-page__advantage advantage">
+            <div class="wrap">
+                <h2 class="advantage__title">Pearson c’est</h2>
+                <ul class="advantage__list">
+                    <li class="advantage__item"><span class="advantage__num">3,456</span>
+                        <h3 class="advantage__title-desc">Ouvrages HE & Business</h3>
+                        <p class="advantage__desc">en toutes les matières économie, gestion, sciences, comptabilité, etc.</p>
                     </li>
-                    <li class="promo-slider__desc-item">
-                        <h3 class="promo-slider__title">Point 2</h3>
-                        <p class="promo-slider__desc">Paragraphe. Texte intégral de l'ouvrage toujours disponible surParagraphe. Texte intégral de l'ouvrage toujours disponible sur</p>
+                    <li class="advantage__item"><span class="advantage__num">100k</span>
+                        <h3 class="advantage__title-desc">Ressources numérques</h3>
+                        <p class="advantage__desc">en toutes les matières économie, gestion, sciences, comptabilité, etc.</p>
                     </li>
-                    <li class="promo-slider__desc-item">
-                        <h3 class="promo-slider__title">Point 3</h3>
-                        <p class="promo-slider__desc">Paragraphe. Texte intégral de l'ouvrage toujours disponible surParagraphe. Texte intégral de l'ouvrage toujours disponible sur</p>
+                    <li class="advantage__item"><span class="advantage__num">30,456</span>
+                        <h3 class="advantage__title-desc">Etudiants connectés</h3>
+                        <p class="advantage__desc">en toutes les matières économie, gestion, sciences, comptabilité, etc.</p>
+                    </li>
+                    <li class="advantage__item"><span class="advantage__num">3,456</span>
+                        <h3 class="advantage__title-desc">Information clée</h3>
+                        <p class="advantage__desc">en toutes les matières économie, gestion, sciences, comptabilité, etc.</p>
+                    </li>
+                    <li class="advantage__item"><span class="advantage__num">100k</span>
+                        <h3 class="advantage__title-desc">Solutions sur-mesures</h3>
+                        <p class="advantage__desc">en toutes les matières économie, gestion, sciences, comptabilité, etc.</p>
+                    </li>
+                    <li class="advantage__item"><span class="advantage__num">30,456</span>
+                        <h3 class="advantage__title-desc">Produits numériques</h3>
+                        <p class="advantage__desc">en toutes les matières économie, gestion, sciences, comptabilité, etc.</p>
                     </li>
                 </ul>
             </div>
-        </div>
-        <section class="landing-page__product product">
-            <h2 class="product__title">Nos titres en FastTrack</h2>
-            <div class="product__wrap">
-                <div class="product__slider">
-                    <div class="glide__track" data-glide-el="track">
-                        <ul class="product__list glide__slides">
-                            <li class="product__item glide__slide aviable">
-                                <div class="product__item-content">
-                                    <figure class="product__img"><img src="img/landing/product-marketing.png" width="185" alt="product-test"></figure><a class="product__mark product__mark--available" href="#">Acheter</a><span class="product__mark product__mark--inavailable-gray">Bientot disponible</span><span class="product__mark product__mark--inavailable-orange">Bientot disponible</span>
-                                </div>
-                            </li>
-                            <li class="product__item glide__slide aviable">
-                                <div class="product__item-content">
-                                    <figure class="product__img"><img src="img/landing/product-principes.png" width="185" alt="product-test"></figure><a class="product__mark product__mark--available" href="#">Acheter</a><span class="product__mark product__mark--inavailable-gray">Bientot disponible</span><span class="product__mark product__mark--inavailable-orange">Bientot disponible</span>
-                                </div>
-                            </li>
-                            <li class="product__item glide__slide inaviable">
-                                <div class="product__item-content">
-                                    <figure class="product__img"><img src="img/landing/product-management.png" width="185" alt="product-test"></figure><a class="product__mark product__mark--available" href="#">Acheter</a><span class="product__mark product__mark--inavailable-gray">Bientot disponible</span><span class="product__mark product__mark--inavailable-orange">Bientot disponible</span>
-                                </div>
-                            </li>
-                            <li class="product__item glide__slide inaviable">
-                                <div class="product__item-content">
-                                    <figure class="product__img"><img src="img/landing/product-strategique.png" width="185" alt="product-test"></figure><a class="product__mark product__mark--available" href="#">Acheter</a><span class="product__mark product__mark--inavailable-gray">Bientot disponible</span><span class="product__mark product__mark--inavailable-orange">Bientot disponible</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="product__arrows glide__arrows" data-glide-el="controls">
-                        <button class="product__arrow product__arrow--left glide__arrow glide__arrow--left" data-glide-dir="&lt;"></button>
-                        <button class="product__arrow product__arrow--right glide__arrow glide__arrow--right" data-glide-dir="&gt;"></button>
-                    </div>
-                </div>
-            </div>
         </section>
-        <section class="landing-page__landing-media landing-media">
-            <div class="landing-media__wrap wrap">
-                <h2 class="landing-media__title">Regarder une vidéo de démonstration</h2>
-                <div class="landing-media__wrap-video">
-                    <button class="landing-media__play-btn" type="button" aria-label="play or stop video"></button>
-                    <video class="landing-media__video" poster="img/landing/landing-media.png">Элемент video не поддерживается вашим браузером. </video>
-                </div>
-                <p class="landing-media__desc">Paragraphe. Texte intégral de l'ouvrage toujours disponible surParagraphe. Texte intégral de l'ouvrage toujours disponible sur</p>
-                <button class="landing-media__btn" type="button">Viosnner la video</button>
-            </div>
-        </section>
-        <div class="landing-page__additional additional">
-            <div class="additional__main-wrap wrap">
-                <h2 class="visually-hidden">information supplémentaire</h2>
-                <div class="additional__wrap">
-                    <h3 class="additional__title">Idéal pour les étudiants</h3>
-                    <p class="additional__desc">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                </div>
-                <div class="additional__wrap">
-                    <h3 class="additional__title">Un autre point très important à dire</h3>
-                    <p class="additional__desc">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                </div>
-            </div>
-        </div>
-        <div class="landing-page__provoke provoke">
+        <div class="home-page__provoke provoke">
             <div class="provoke__item provoke__item--external wrap">
                 <p class="provoke__text">A call-to-action block. Click me now:</p><a class="provoke__link" href="#">External link</a>
             </div>
@@ -246,13 +235,6 @@
             <div class="footer__info"><a class="footer__info-item" href="#">Sécurité des données</a><a class="footer__info-item" href="https://www.pearson.fr/">Pearson.fr</a><a class="footer__info-item" href="#">Coockies</a></div>
         </div>
     </footer>
-    <div class="popup-video popup-video--close">
-        <div class="popup-video__wrap">
-            <button class="popup-video__play" type="button" aria-label="play or stop video"></button>
-            <video class="popup-video__video" poster="img/content/content-media-mobile.png">Элемент video не поддерживается вашим браузером. </video>
-            <button class="popup-video__close" type="button" aria-label="close window"></button>
-        </div>
-    </div>
     <div class="form form--contact form--close">
         <div class="form__wrap">
             <h2 class="form__title">Laissez vos coordonnées</h2>
@@ -270,105 +252,39 @@
                 <label class="visually-hidden" for="form-company">Votre etablissement</label>
                 <input type="text" id="form-company" name="company" placeholder="Votre etablissement">
                 <button class="form__submit" type="submit">Visionner la video</button>
-                <input class="form__privacy-checkbox visually-hidden" type="checkbox" id="privacy" name="data-processing" checked="">
+                <input class="form__privacy-checkbox visually-hidden" type="checkbox" id="privacy" name="data-processing" checked>
                 <label class="form__privacy" for="privacy">En cliquant sur “visionner la video” je suis d’accord pour tout ce qui est utilisation de mes donnees, etcetera et etecetera. Je suis absolument d’accord avec Pearson sur tout et pour toujours.</label>
             </form>
             <button class="form__close" type="button" aria-label="close window"></button>
+        </div>
+    </div>
+    <div class="popup-video popup-video--close">
+        <div class="popup-video__wrap">
+            <button class="popup-video__play" type="button" aria-label="play or stop video"></button>
+            <video class="popup-video__video" poster="img/content/content-media-mobile.png">Элемент video не поддерживается вашим браузером. </video>
+            <button class="popup-video__close" type="button" aria-label="close window"></button>
         </div>
     </div>
     <script src="js/polyfill.min.js"></script>
     <script src="js/jquery-2.2.3.min.js"></script>
     <script src="glide/glide.min.js"></script>
     <script src="js/script.js"></script>
-    <script type="text/javascript" defer="">
-        new Glide('.promo-slider__glide', {
+    <script type="text/javascript" defer>
+        new Glide('.glide', {
             type: 'carousel',
             startAt: 0,
-            perView: 1,
-            gap: 20,
+            perView: 3,
+            gap: 30,
             autoplay: 4000,
+            animationTimingFunc: 'cubic-bezier(.36,.39,.31,1.02)',
             dragThreshold: 50,
             animationDuration: 1000,
-            animationTimingFunc: 'cubic-bezier(.36,.39,.31,1.02)',
             breakpoints: {
-                900: {
-                    perView: 1,
-                    peek: {
-                        before: 60,
-                        after: 60
-                    }
-                }
-            },
-        }).mount();
-    </script>
-    <script type="text/javascript" defer="">
-        new Glide('.product__slider', {
-            type: 'carousel',
-            startAt: 0,
-            perView: 4,
-            gap: 45,
-            autoplay: 5500,
-            dragThreshold: 50,
-            animationDuration: 1000,
-            animationTimingFunc: 'cubic-bezier(.36,.39,.31,1.02)',
-            peek: {
-                before: 0,
-                after: 0
-            },
-            breakpoints: {
-                1070: {
-                    perView: 3,
-                    gap: 0
+                1100: {
+                    perView: 2
                 },
-                780: {
-                    perView: 2,
-                    gap: 0,
-                    peek: {
-                        before: 0,
-                        after: 0
-                    }
-                },
-                670: {
-                    perView: 1,
-                    peek: {
-                        before: 150,
-                        after: 150
-                    }
-                },
-                560: {
-                    perView: 1,
-                    peek: {
-                        before: 125,
-                        after: 125
-                    }
-                },
-                520: {
-                    perView: 1,
-                    peek: {
-                        before: 110,
-                        after: 110
-                    }
-                },
-                440: {
-                    perView: 1,
-                    peek: {
-                        before: 90,
-                        after: 90
-                    }
-                },
-                390: {
-                    perView: 1,
-                    peek: {
-                        before: 78,
-                        after: 78
-                    }
-                },
-                370: {
-                    perView: 1,
-                    peek: {
-                        before: 0,
-                        after: 0
-                    }
+                550: {
+                    perView: 1
                 }
             },
         }).mount();
