@@ -2,8 +2,8 @@
   display: block;
   width: 100%;
   padding: 12px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   border: none;
   text-align: left;
   font-size: 16px;
@@ -26,9 +26,9 @@
     opacity: 1;
   }
   
- &::placeholder { 
-    font-size: 16px;
-    line-height: 20px;
+  &::placeholder { 
+    font-size: 14px;
+    line-height: 1.3em;
     font-family: $font-main;
     font-weight: 400;
     color: $text-light;
@@ -40,5 +40,19 @@
 
   &:disabled { 
     box-shadow: 0 0 0 1px $red;
+  }
+
+  @media (max-width:380px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    &::placeholder { 
+      font-size: 16px;
+    }
   }
 }

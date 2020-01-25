@@ -29,6 +29,10 @@
   color: $blue-black;
 }
 
+.content-slider__desc {
+  color: #474747;
+}
+
 .content-slider__link {
   display: block;
   padding-top: 15px;
@@ -46,15 +50,16 @@
 .content-slider__wrap-pointer {
   display: flex;
   justify-content: center;
+  height: 14px;
+
 }
 
 .content-slider__pointer {
-  width: 13px;
-  height: 13px;
   border: solid 1px #969696;
   border-radius: 50%;
   margin-left: 10px;
   margin-right: 10px; 
+  color: #000;
 }
 
 .glide__bullet--active {

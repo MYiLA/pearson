@@ -4,6 +4,7 @@
 }
 
 .content-reviews__wrap {
+  display: block;
   background-color: $white;
   box-shadow: 0 4px 4px 0 rgba(0,0,0,.25);
   margin-bottom: 50px;
@@ -57,6 +58,7 @@
 
 .content-reviews__desc-desc {
   margin-bottom: 30px;
+  color: #474747;
 }
 
 .content-reviews__more {
