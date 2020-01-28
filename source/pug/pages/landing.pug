@@ -17,7 +17,7 @@ html(lang="fr")
     main(class="landing-page")
       section(class="landing-page__landing-promo landing-promo wrap")
         include ../modules/landing-promo
-      div(class="landing-page__important important")
+      div(class="landing-page__important important" id="important")
         include ../modules/important
       div(class="landing-page__promo-slider promo-slider wrap")
         include ../modules/promo-slider
@@ -39,5 +39,6 @@ html(lang="fr")
     script(src="glide/glide.min.js")
     script(src="js/script.js")
   
+    script(type='text/javascript' defer) const videoLandingElement = document.querySelector('.landing-media__btn');videoLandingElement.addEventListener('click', onClickFormVideo);
     script(type='text/javascript' defer) new Glide('.promo-slider__glide', {type: 'carousel',startAt: 0, perView: 1, gap: 20, autoplay: 4000, dragThreshold: 50, animationDuration: 1000, animationTimingFunc: 'cubic-bezier(.36,.39,.31,1.02)', breakpoints: {900: {perView: 1, peek: {before: 60, after: 60}}},}).mount();
     script(type='text/javascript' defer) new Glide('.product__slider', {type: 'carousel',startAt: 0, perView: 4, gap: 45, autoplay: 5500, dragThreshold: 50, animationDuration: 1000, animationTimingFunc: 'cubic-bezier(.36,.39,.31,1.02)',  peek: {before: 0, after: 0}, breakpoints: {1070: {perView: 3, gap: 0}, 780: {perView: 2, gap: 0, peek: { before: 0, after: 0}}, 670: {perView: 1, peek: { before: 150, after: 150 }}, 560: {perView: 1, peek: {before: 125,after: 125}}, 520: {perView: 1, peek: { before: 110, after: 110 }}, 440: {perView: 1, peek: { before: 90, after: 90 }}, 390: {perView: 1, peek: { before: 78, after: 78 }}, 370: {perView: 1, peek: { before: 0, after: 0 }}},}).mount();

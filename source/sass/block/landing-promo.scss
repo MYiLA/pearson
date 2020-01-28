@@ -12,6 +12,7 @@
     background-image: url(../img/home-page/home-cover-bg.png);
     background-size: 300px;
     background-position: 100% -10%;
+    transition: 0.6s;
 
     @media (min-width: 390px) {
       background-image: url(../img/home-page/home-cover-bg.png);
@@ -30,23 +31,18 @@
     }
 
     @media (min-width: 900px) {
-      background-size: 400px;
-      background-position: 37% 17px;
+      background-size: 605px;
+      background-position: -50px -94px;
     }
 
     @media (min-width: 1120px) {
-      background-size: 490px;
-      background-position: 33% 0;
-    }
-
-    @media (min-width: 1250px) {
-      background-size: 495px;
-      background-position: 38% 100px;
+      background-size: 735px;
+      background-position: -50px -160px;
     }
 
     @media (min-width: 1440px) {
-      background-size: 580px;
-      background-position: 33% 13px;
+      background-size: 880px;
+      background-position: -50px -220px;
     }
   }
 
@@ -77,19 +73,32 @@
   }
 }
 
-.landing-promo__wrap--landing {
-  .wheel-promo__tooltip {
-    display: block;
-    position: static;
-    margin-bottom: 20px;
+.landing-promo__wrap {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &--landing {
+    position: relative;
+
+    .wheel-promo__tooltip {
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: block;
+      margin-bottom: 20px;
+    }
   }
 }
+
+
+
 
 .landing-promo__highlight {
   color: $green;
 }
 
 .landing-promo__desc {
+  margin-top: -5px;
   margin-bottom: 30px;
   color: #474747;
 }
@@ -146,14 +155,17 @@
 @media (min-width: $tablet-width) {
   .landing-promo {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-top: 200px;
     padding-bottom: 200px;
+    padding-left: 40px;
+    padding-right: 40px;
     height: auto;
   }
+
   .landing-promo__title {
-    padding-top: 8%;
-    .landing-page &{
+
+    .landing-page & {
       padding-top: 0;
     }
   }
@@ -164,7 +176,6 @@
       text-align: center;
       max-width: 300px;
       display: block;
-      position: static;
       margin-bottom: 20px;
       font-size: 14px;
       line-height: 14px;
@@ -173,6 +184,7 @@
 
   .landing-promo__desc {
     max-width: 550px;
+    margin-top: -17px;
     margin-bottom: 50px;
   }
 
@@ -199,6 +211,11 @@
 }
 
 @media (min-width: 1250px) {
+
+  .landing-promo__desc {
+    font-size: 18px;
+    margin-top: -26px;
+  }
 
   .landing-promo__title {
     max-width: 668px;

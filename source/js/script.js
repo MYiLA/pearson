@@ -2,6 +2,19 @@
 
 const tabletWidth = 900;
 
+// anglais langue étrangère в саб-хедере — ведет на главную
+
+const getUrlParams = search => {
+  const params = {};
+  search.substr(1).split("&").forEach(part => {
+    const [key, value] = part.split("=");
+    params[key] = decodeURIComponent(value);
+  });
+  return params;
+};
+
+let requestUrl = getUrlParams(window.location.search).wheel;
+
 // колесо///
 
 const menus = [...document.querySelectorAll('.wheel-promo')];
@@ -109,25 +122,48 @@ menuCloseElement.addEventListener('click', onClickMoveMenu);
 
 // форма
 
-const formCloseElement = document.querySelector('.form__close');
-const formNavOpenElement = document.querySelector('.main-nav__contact');
-const mainFormElement = document.querySelector('.form');
-const popupFormElement = document.querySelector('.form__wrap');
+const formVideoElement = document.querySelector('.form--video');
+const formVideoCloseElement = formVideoElement.querySelector('.form__close');
+const popupVideoFormElement = formVideoElement.querySelector('.form__wrap');
+const videoSubmitElement = formVideoElement.querySelector('.form__submit');
 
-let onClickNavForm = function () {
-  movePopup(popupFormElement, mainFormElement, mainFormElement, 'form--open', 'form--close')
+
+const formNavBtnElement = document.querySelector('.main-nav__contact');
+const formContactElement = document.querySelector('.form--contact');
+const formContactCloseElement = formContactElement.querySelector('.form__close');
+const popupContactFormElement = formContactElement.querySelector('.form__wrap');
+const contactSubmitElement = formContactElement.querySelector('.form__submit');
+
+contactSubmitElement.addEventListener('click', function (evt) {
+  evt.preventDefault();
+});
+
+
+
+let onClickFormVideo = function () {
+  movePopup(popupVideoFormElement, formVideoElement, formVideoElement, 'form--open', 'form--close')
 }
 
-formCloseElement.addEventListener('click', onClickNavForm);
-formNavOpenElement.addEventListener('click', onClickNavForm);
+let onClickFormContact = function () {
+  movePopup(popupContactFormElement, formContactElement, formContactElement, 'form--open', 'form--close')
+}
 
-const formLandingElement = document.querySelector('.landing-promo__btn--form-1');
+formVideoCloseElement.addEventListener('click', onClickFormVideo);
+
+formContactCloseElement.addEventListener('click', onClickFormContact);
+formNavBtnElement.addEventListener('click', onClickFormContact);
+
+const formLandingElement = document.querySelector('.landing-promo__btn--video');
 const provokeElement = document.querySelector('.provoke__link--form');
 const promoBtnElement = document.querySelector('.landing-promo__btn--form-2');
 
-formLandingElement.addEventListener('click', onClickNavForm);
-provokeElement.addEventListener('click', onClickNavForm);
-promoBtnElement.addEventListener('click', onClickNavForm);
+const videoProvokeElement = document.querySelector('.provoke__link--video');
+
+formLandingElement.addEventListener('click', onClickFormVideo);
+videoProvokeElement.addEventListener('click', onClickFormVideo);
+
+provokeElement.addEventListener('click', onClickFormContact);
+promoBtnElement.addEventListener('click', onClickFormContact);
 
 // видео
 // видео
@@ -142,26 +178,14 @@ let onClickNavVideo = function () {
   movePopup(popupVideoElement, mainVideoElement, mainVideoElement, 'popup-video--open', 'popup-video--close')
 }
 
-const videoPromoElement = document.querySelector('.landing-promo__btn--video');
-const videoLandingElement = document.querySelector('.landing-media__btn');
-const videoProvokeElement = document.querySelector('.provoke__link--video');
-const videoSubmitElement = document.querySelector('.form__submit');
-
-
 videoNavOpenElement.addEventListener('click', onClickNavVideo);
 videoCloseElement.addEventListener('click', onClickNavVideo);
-videoPromoElement.addEventListener('click', onClickNavVideo);
-// videoLandingElement.addEventListener('click', onClickNavVideo);
-videoProvokeElement.addEventListener('click', onClickNavVideo);
 videoSubmitElement.addEventListener('click', function (evt) {
   evt.preventDefault();
   onClickNavVideo();
 });
 
-
 // переключение вкладок меню
-
-
 
 const superieurBookmarkElement = document.querySelector('.main-nav__bookmark-item--superieur');
 const superieurWheelElement = document.querySelector('.wheel-promo--superieur');
@@ -208,8 +232,17 @@ let activateEtrangere = function () {
   setTimeout(closeMenu, 600);
 }
 
-superieurBookmarkElement.addEventListener('click', activateSuperieur);
-etrangereBookmarkElement.addEventListener('click', activateEtrangere);
+if (requestUrl === "superieur") {
+  activateSuperieur()
+}
+
+if (requestUrl === "etrangere") {
+  activateEtrangere()
+}
+
+
+// superieurBookmarkElement.addEventListener('click', activateSuperieur);
+// etrangereBookmarkElement.addEventListener('click', activateEtrangere);
 
 // слайдер//
 
@@ -232,3 +265,18 @@ const showSlidesCaption = function () {
 let timerId = setInterval(() => showSlidesCaption(), 1000);
 
 // проверять текущую активную подпись каждые 2 секунды
+
+// Скролл до дом-элемента
+
+$(document).ready(function(){
+  $('a').on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: ($(hash).offset().top) - 150
+      }, 800);
+    }      
+  });
+});

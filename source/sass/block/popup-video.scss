@@ -11,9 +11,12 @@
 }
 
 .popup-video__wrap {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
   max-width: 920px;
-  padding: 7px;
   background-color: $white;
   margin: 0 auto;
 

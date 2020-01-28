@@ -72,6 +72,12 @@ padding-top: 60px;
 
 @media (min-width: $tablet-width) {
 
+  .landing-media {
+    padding-top: 0;
+    margin-top: 145px;
+    margin-bottom: 145px;
+  }
+
   .landing-media__wrap {
     position: relative;
     flex-direction: column;
@@ -79,9 +85,7 @@ padding-top: 60px;
     justify-content: center;
     text-align: left;
     padding-right: 50%;
-    &::before{
-      max-width: 581px;
-    }
+    padding-left: 50px;
 
     @media(min-width: 1370px) {
       padding-right: 637px;
@@ -91,13 +95,17 @@ padding-top: 60px;
   .landing-media__title {
     max-width: 510px;
     padding: 0;
+    margin-top: 0;
+    margin-bottom: 15px;
     font-size: 48px;
-    line-height: 70px;
+    line-height: 64px;
   }
 
   .landing-media__desc {
     max-width: 510px;
     padding: 0;
+    margin-top: 0;
+    margin-bottom: 38px;
   }
 
   .landing-media__btn {
@@ -111,7 +119,9 @@ padding-top: 60px;
     transform: translateY(-50%);
     max-width: 600px;
     width: 45%;
+    max-width: 581px;
     margin-bottom: 0;
+    margin-right: 50px;
   }
 
   .landing-media__play-btn {
