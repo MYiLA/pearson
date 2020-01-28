@@ -39,13 +39,14 @@
 }
 
 .content-reviews__wrap-desc {
+  width: 78px;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 50px;
 
   & img {
     width: 78px;
-    height: auto;
+    height: 78px;
   }
 }
 

@@ -232,22 +232,20 @@ let activateEtrangere = function () {
   setTimeout(closeMenu, 600);
 }
 
-if (requestUrl === "superieur") {
-  activateSuperieur()
+const openBookmark = () => {
+  if (requestUrl === "superieur") {
+    activateSuperieur()
+  }
+
+  if (requestUrl === "etrangere") {
+    activateEtrangere()
+  } else {
+    $('.main-nav__bookmark-item--superieur main-nav__bookmark').trigger('click');
+  }
 }
+openBookmark();
 
-if (requestUrl === "etrangere") {
-  activateEtrangere()
-}
-
-
-// superieurBookmarkElement.addEventListener('click', activateSuperieur);
-// etrangereBookmarkElement.addEventListener('click', activateEtrangere);
-
-// слайдер//
-
-// если у .promo-slider__item:nth-child(n) есть класс glide__slide--active, то у
-// .promo-slider__desc-item:nth-child(n) добавляем класс .active
+// $('.main-nav__bookmark-item--superieur main-nav__bookmark').trigger('click');
 
 const promoSlides = document.querySelectorAll('.promo-slider__item');
 const promoSliderCaptions = document.querySelectorAll('.promo-slider__desc-item');
@@ -268,8 +266,8 @@ let timerId = setInterval(() => showSlidesCaption(), 1000);
 
 // Скролл до дом-элемента
 
-$(document).ready(function(){
-  $('a').on('click', function(event) {
+$(document).ready(function () {
+  $('a').on('click', function (event) {
     if (this.hash !== "") {
       event.preventDefault();
       var hash = this.hash;
@@ -277,6 +275,6 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop: ($(hash).offset().top) - 150
       }, 800);
-    }      
+    }
   });
 });
