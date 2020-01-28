@@ -13,7 +13,7 @@ const getUrlParams = search => {
   return params;
 };
 
-let requestUrl = getUrlParams(window.location.search).wheel;
+let requestUrl = getUrlParams(window.location.search).wheel || 'superieur';
 
 // колесо///
 
