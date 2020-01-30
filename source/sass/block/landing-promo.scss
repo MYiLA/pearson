@@ -44,6 +44,10 @@
       background-size: 880px;
       background-position: -50px -220px;
     }
+
+    @media (min-width: 1650px) {
+      background-position: -50px -250px;      
+    }
   }
 
   .landing-page & {
@@ -221,5 +225,12 @@
     max-width: 668px;
     font-size: 52px;
     line-height: 71px;
+  }
+}
+
+@media (min-width: 1650px) {
+  .landing-promo {
+    padding-top: 165px;
+    padding-bottom: 165px;
   }
 }

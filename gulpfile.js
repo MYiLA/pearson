@@ -13,7 +13,7 @@ var svgstore = require('gulp-svgstore')
 var posthtml = require('gulp-posthtml');
 var include = require('posthtml-include');
 var del = require('del');
-var uglify = require('gulp-uglify-es').default;
+// var uglify = require('gulp-uglify-es').default;
 var htmlmin = require('gulp-htmlmin')
 var autoprefixer = require('autoprefixer');
 var pug = require('gulp-pug');
@@ -40,7 +40,7 @@ gulp.task('js', () => {
     .pipe(babel({
       presets: ['@babel/preset-env']
     }))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('build/js'))
 });
 
