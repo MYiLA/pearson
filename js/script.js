@@ -124,91 +124,7 @@ menus.map(function (menu) {
   if (window.innerWidth >= tabletWidth) {
     onMenuCircularCreated();
   }
-}); // липкая шапка
-
-$(window).scroll(function () {
-  if ($(this).scrollTop() > 1) {
-    $('.header__main-nav').addClass('fixed');
-    $('.header__main-nav').removeClass('static');
-  } else {
-    $('.header__main-nav').addClass('static');
-    $('.header__main-nav').removeClass('fixed');
-  }
-}); // попапы 
-
-var openAnimation = function openAnimation(popup, wrap) {
-  wrap.classList.remove('dissolve-hidden');
-  popup.classList.remove('roll-right-hidden');
-  wrap.classList.add('dissolve-show');
-  popup.classList.add('roll-right-show');
-};
-
-var closeAnimation = function closeAnimation(popup, wrap) {
-  wrap.classList.remove('dissolve-show');
-  popup.classList.remove('roll-right-show');
-  wrap.classList.add('dissolve-hidden');
-  popup.classList.add('roll-right-hidden');
-};
-
-var movePopup = function movePopup(popup, wrap, mainWrap, classOpen, classClose) {
-  if (mainWrap.classList.contains(classOpen)) {
-    var closePopup = function closePopup() {
-      mainWrap.classList.remove(classOpen);
-      mainWrap.classList.add(classClose);
-      wrap.classList.remove('dissolve-hidden');
-      popup.classList.remove('roll-right-hidden');
-    };
-
-    setTimeout(closePopup, 800);
-    closeAnimation(popup, wrap);
-  } else {
-    mainWrap.classList.add(classOpen);
-    mainWrap.classList.remove(classClose);
-    wrap.classList.remove('dissolve-show');
-    popup.classList.remove('roll-right-show');
-    openAnimation(popup, wrap);
-  }
-};
-
-var menuOpenElement = document.querySelector('.main-nav__burger');
-var menuCloseElement = document.querySelector('.main-nav__close');
-var mainNavElement = document.querySelector('.main-nav');
-var wrapNavElement = document.querySelector('.main-nav__wrap-popup');
-var popupNavElement = document.querySelector('.main-nav__main-nav');
-
-var onClickMoveMenu = function onClickMoveMenu() {
-  movePopup(popupNavElement, wrapNavElement, mainNavElement, 'main-nav--open', 'main-nav--close');
-};
-
-menuOpenElement.addEventListener('click', onClickMoveMenu);
-menuCloseElement.addEventListener('click', onClickMoveMenu); // открытие/закрытие главной формы заявок 
-
-var formNavBtnElement = document.querySelector('.main-nav__contact');
-var formContactElement = document.querySelector('.form--contact');
-var formContactCloseElement = formContactElement.querySelector('.form__close');
-var popupContactFormElement = formContactElement.querySelector('.form__wrap');
-var contactSubmitElement = formContactElement.querySelector('.form__submit');
-contactSubmitElement.addEventListener('click', function (evt) {
-  evt.preventDefault();
-});
-
-var onClickFormContact = function onClickFormContact() {
-  movePopup(popupContactFormElement, formContactElement, formContactElement, 'form--open', 'form--close');
-};
-
-formContactCloseElement.addEventListener('click', onClickFormContact);
-formNavBtnElement.addEventListener('click', onClickFormContact); // открытие/закрытие формы на просмотр видео
-
-var formVideoElement = document.querySelector('.form--video');
-var formVideoCloseElement = formVideoElement.querySelector('.form__close');
-var popupVideoFormElement = formVideoElement.querySelector('.form__wrap');
-var videoSubmitElement = formVideoElement.querySelector('.form__submit');
-
-var onClickFormVideo = function onClickFormVideo() {
-  movePopup(popupVideoFormElement, formVideoElement, formVideoElement, 'form--open', 'form--close');
-};
-
-formVideoCloseElement.addEventListener('click', onClickFormVideo); // привязка кнопок к формам
+}); // привязка кнопок к формам
 
 var formLandingElement = document.querySelector('.landing-promo__btn--video');
 var provokeElement = document.querySelector('.provoke__link--form');
@@ -217,24 +133,7 @@ var videoProvokeElement = document.querySelector('.provoke__link--video');
 formLandingElement.addEventListener('click', onClickFormVideo);
 videoProvokeElement.addEventListener('click', onClickFormVideo);
 provokeElement.addEventListener('click', onClickFormContact);
-promoBtnElement.addEventListener('click', onClickFormContact); // видео попап и его привязка к кнопкам
-
-var videoCloseElement = document.querySelector('.popup-video__close');
-var videoNavOpenElement = document.querySelector('.popup-video');
-var mainVideoElement = document.querySelector('.popup-video');
-var popupVideoElement = document.querySelector('.popup-video__wrap');
-
-var onClickNavVideo = function onClickNavVideo() {
-  movePopup(popupVideoElement, mainVideoElement, mainVideoElement, 'popup-video--open', 'popup-video--close');
-};
-
-videoNavOpenElement.addEventListener('click', onClickNavVideo);
-videoCloseElement.addEventListener('click', onClickNavVideo);
-videoSubmitElement.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  onClickFormVideo();
-  onClickNavVideo();
-}); // динамическая смена подписей к слайдеру
+promoBtnElement.addEventListener('click', onClickFormContact); // динамическая смена подписей к слайдеру
 
 var promoSlides = document.querySelectorAll('.promo-slider__item');
 var promoSliderCaptions = document.querySelectorAll('.promo-slider__desc-item');
@@ -255,16 +154,4 @@ var showSlidesCaption = function showSlidesCaption() {
 
 var timerId = setInterval(function () {
   return showSlidesCaption();
-}, 1000); // Плавный скролл ссылок-якорей
-
-$(document).ready(function () {
-  $('a').on('click', function (event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top - 150
-      }, 800);
-    }
-  });
-});
+}, 1000);
