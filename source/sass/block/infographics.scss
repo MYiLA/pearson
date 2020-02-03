@@ -1,6 +1,12 @@
 .infographics {
   margin-left: 20px;
   margin-right: 20px;
+  .infographics__item {
+     p {
+    padding: 0;
+  }
+  }
+ 
 }
 
 .infographics__list {
@@ -39,6 +45,7 @@
 
 .infographics__title {
   margin: 0;
+  margin-bottom: 15px;
   font-family: $font-accent;
   font-size: 24px;
   line-height: 34px;
