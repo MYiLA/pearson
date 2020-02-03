@@ -1,8 +1,45 @@
 .content-page {
+
   .provoke__item--contact,
   .provoke__item--video,
   .important__message--landing {
     display: none;
+  }
+
+  blockquote {
+    margin: 0;
+    padding-top: 65px;
+    padding-right: 20px;
+    padding-bottom: 65px;
+    padding-left: 20px;
+    margin-bottom: 80px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 38px;
+    font-family: $font-accent;
+    color: $blue-dark;
+    background-color: $blue-light;
+  }
+
+  p {
+    max-width: 790px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+
+  h1 {
+    max-width: 790px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 400;
+    font-family: $font-accent;
+    font-size: 32px;
+    line-height: 52px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: $blue-black;
   }
 }
 
@@ -14,15 +51,15 @@
   margin-bottom: 90px;
 
   &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: #0f0f0f;
-      opacity: .38;
-    }
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #0f0f0f;
+    opacity: .38;
+  }
 }
 
 .content-page__title {
@@ -38,44 +75,43 @@
   color: $blue-black;
 }
 
-.content-page__desc {
-  max-width: 790px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
-  margin-bottom: 80px;
-}
-
-.content-page__important {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: $blue-light;
-  margin-bottom: 80px;
-}
-
 .content-page__infographics {
   padding-top: 75px;
 }
 
 @media (min-width: 600px) {
   .content-page__cover {
-   height: 400px;
+    height: 400px;
   }
 }
 
 @media (min-width: $tablet-width) {
+  .content-page {
+    blockquote {
+      padding-right: 25%;
+      padding-left: 25%;
+    }
+
+    p {
+      padding-left: 50px;
+      padding-right: 50px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    h1 {
+      padding-left: 50px;
+    padding-right: 50px;
+    font-size: 52px;
+    line-height: 62px;
+    }
+  }
+
   .content-page__title {
     padding-left: 50px;
     padding-right: 50px;
     font-size: 52px;
-    line-height: 62px;  
-  }
-
-  .content-page__desc {
-    padding-left: 50px;
-    padding-right: 50px;
-    font-size: 18px;
-    line-height: 24px;   
+    line-height: 62px;
   }
 }
 
@@ -83,6 +119,7 @@
   .content-page__cover {
     overflow: hidden;
     height: 415px;
+
     & img {
       position: absolute;
       width: auto;
