@@ -30,17 +30,9 @@
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 90px;
-  
-  &::before {
-    content: "";
-    position: absolute;
-    width: 71px;
-    height: 71px;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-image: url(../img/content/icon-infographic.svg);
-  }
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 70px auto;
 }
 
 .infographics__title {
@@ -61,6 +53,7 @@
   .infographics__item {
     width: 270px;
     text-align: left;
+    background-position: 0 0;
     &::before {
       left: 0;
       transform: none,
