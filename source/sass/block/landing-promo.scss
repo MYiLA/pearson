@@ -7,74 +7,6 @@
   @media (max-width: $tablet-width) {
     margin: 0;
   }
-
-  .home-page & {
-    background-image: url(../img/home-page/home-cover-bg.png);
-    background-size: 300px;
-    background-position: 100% -10%;
-    transition: 0.6s;
-
-    @media (min-width: 390px) {
-      background-image: url(../img/home-page/home-cover-bg.png);
-      background-size: 300px;
-      background-position: 94% -66px;
-    }
-
-    @media (min-width: 570px) {
-      background-size: 300px;
-      background-position: 94% -66px;
-    }
-
-    @media (min-width: 790px) {
-      background-size: 350px;
-      background-position: 100% -116px;
-    }
-
-    @media (min-width: 900px) {
-      background-size: 605px;
-      background-position: -50px -94px;
-    }
-
-    @media (min-width: 1120px) {
-      background-size: 735px;
-      background-position: -50px -160px;
-    }
-
-    @media (min-width: 1440px) {
-      background-size: 880px;
-      background-position: -50px -220px;
-    }
-
-    @media (min-width: 1650px) {
-      background-position: -50px -250px;      
-    }
-  }
-
-  .landing-page & {
-    background-image: url(../img/landing/landing-bg.png);
-    background-size: cover;
-    background-position: 48% -64px;
-
-    @media (min-width: 690px) {
-      background-size: 90%;
-      background-position: 170px -75px;
-    }
-
-    @media (min-width: 785px) {
-      background-size: 90%;
-      background-position: 200px -100px;
-    }
-
-    @media (min-width: 840px) {
-      background-size: 90%;
-      background-position: 210px -120px;
-    }
-
-    @media (min-width: $tablet-width) {
-      background-size: 90%;
-      background-position: -100% 50%;
-    }
-  }
 }
 
 .landing-promo__wrap {
@@ -93,9 +25,6 @@
     }
   }
 }
-
-
-
 
 .landing-promo__highlight {
   color: $green;
@@ -122,12 +51,34 @@
 }
 
 .landing-promo__wrap {
+  position: relative;
   margin-bottom: 10px;
   margin-left: 20px;
   margin-right: 20px;
+
+  img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .2;
+
+    @media (min-width: 600px) {
+      left: 70%;
+    }
+
+    @media (min-width: 900px) {
+      left: 50%;
+      width: 90%;
+      height: auto;
+    }
+  }
 }
 
 .landing-promo__title {
+  position: relative;
   font-family: $font-main;
   font-size: 36px;
   line-height: 46px;
@@ -145,6 +96,7 @@
 }
 
 .landing-promo__wrap-buttons {
+  position: relative;
   max-width: 310px;
   display: flex;
   flex-wrap: wrap;

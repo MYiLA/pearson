@@ -254,8 +254,9 @@
   }
 
   .main-nav__logo {
-    width: 230px;
+    width: 180px;
     margin-top: -6px;
+    flex-shrink: 0;
   }
 
   .main-nav .main-nav__wrap-popup {

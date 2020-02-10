@@ -1,5 +1,5 @@
 .advantage {
-  background-color: $light-bg;
+  background-color: #f9f9f9;
   padding-top: 50px;
   padding-bottom: 110px;
   text-align: center;
@@ -12,6 +12,10 @@
   font-size: 28px;
   margin-bottom: 70px;
   color: $blue-black;
+
+  @media(min-width: $tablet-width) {
+    font-size: 36px;
+  }
 }
 
 .advantage__title-desc {

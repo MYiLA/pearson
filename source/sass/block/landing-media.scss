@@ -1,6 +1,5 @@
 .landing-media {
-margin-bottom: 70px;
-padding-top: 60px;
+  background-color: #f4f4f4;
 }
 
 .landing-media__wrap {
@@ -9,6 +8,8 @@ padding-top: 60px;
   align-items: center;
   text-align: center;
   margin-bottom: 40px;
+  padding-bottom: 70px;
+  padding-top: 60px;
 }
 
 .landing-media__title {
@@ -71,13 +72,6 @@ padding-top: 60px;
 }
 
 @media (min-width: $tablet-width) {
-
-  .landing-media {
-    padding-top: 0;
-    margin-top: 145px;
-    margin-bottom: 145px;
-  }
-
   .landing-media__wrap {
     position: relative;
     flex-direction: column;
@@ -86,7 +80,9 @@ padding-top: 60px;
     text-align: left;
     padding-right: 50%;
     padding-left: 50px;
-
+    padding-top: 145px;
+    padding-bottom: 145px;
+    margin-bottom: 0;
     @media(min-width: 1370px) {
       padding-right: 637px;
     }
@@ -117,9 +113,9 @@ padding-top: 60px;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 600px;
     width: 45%;
     max-width: 581px;
+    min-height: 400px;
     margin-bottom: 0;
     margin-right: 50px;
   }

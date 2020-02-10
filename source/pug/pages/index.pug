@@ -12,16 +12,20 @@ html(lang="fr")
     link(rel="stylesheet" href="css/style.min.css")
 
   body
-    include ../modules/header
+    header
+      .header
+        include ../modules/header
 
     main(class="home-page")
-      h1(class="visually-hidden") entreprise d'éducation internationale
-      section(class="home-page__landing-promo landing-promo wrap")
-        include ../modules/landing-promo
+      div(class="promo-bg")
+        h1(class="visually-hidden") entreprise d'éducation internationale
+        section(class="home-page__landing-promo landing-promo wrap")
+          include ../modules/landing-promo
       div(class="home-page__content-slider content-slider" id="content-slider")
         include ../modules/content-slider
-      section(class="home-page__content-reviews content-reviews wrap")
-        include ../modules/content-reviews
+      section(class="home-page__content-reviews content-reviews")
+        div(class="wrap")
+          include ../modules/content-reviews
       section(class="home-page__advantage advantage")
         include ../modules/advantage
       div(class="home-page__provoke provoke")

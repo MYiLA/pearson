@@ -12,11 +12,14 @@ html(lang="fr")
     link(rel="stylesheet" href="css/style.min.css")
     
   body
-    include ../modules/header
+    header
+      .header
+        include ../modules/header
 
     main(class="landing-page")
-      section(class="landing-page__landing-promo landing-promo wrap")
-        include ../modules/landing-promo
+      div(class="promo-bg")
+        section(class="landing-page__landing-promo landing-promo wrap")
+          include ../modules/landing-promo
       blockquote J'ai besoin de maîtriser et de réviser rapidement les concepts clés sur un sujet
       div(class="landing-page__promo-slider promo-slider wrap")
         include ../modules/promo-slider
